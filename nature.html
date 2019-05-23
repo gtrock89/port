@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <style>
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+  color:#333;
+  text-decoration: none;
+  list-style:none;
+}
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  height: 100%;
+ 
+  display: flex;
+  justify-content:space-between;
+}
+.header{
+  width: 100%;
+  height: 250px;
+ 
+
+}
+.header .nav {
+ 
+ margin-left: 50px;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+@media (max-width:768px){
+ .header .nav{
+    display: none;
+  }
+}
+.header .nav i{
+  font-size: 50px;
+  height: 80px;
+  width: 80px;
+  padding: 15px;
+  color:#fff;
+  border: 1px solid #000;
+   border-radius:50% ;
+  background-color:#333;
+  margin-left: 25px;
+}
+.header .nav p{
+  font-size: 20px;
+  letter-spacing:-2px;
+  border-bottom:3px solid #333;
+  
+}
+.nav ul{
+  margin-top: 5px;
+}
+.nav ul li{
+  text-align: left;
+}
+.nav ul li a{
+  display: block;
+  font-size: 13px;
+  padding: 2px 0px;
+ 
+}
+.nav ul li a:hover{
+  letter-spacing:2px;
+  color:#3CBC81;
+ 
+}
+.header .title{  
+ 
+  text-align: center;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+@media (max-width:768px){
+ .header .title{
+    margin: 0 auto;
+  }
+}
+.header .title p{
+ 
+  letter-spacing:2px;
+  margin-bottom: -20px;
+}
+.header .title h1{
+  
+  font-size: 65px;
+  letter-spacing:10px;
+  margin-bottom: -5px;
+  
+}
+.header .title span{
+  color:gray;
+  font-size:10px;
+  letter-spacing:1px;
+}
+.banner{
+  width: 100%;
+  height:450px;
+  background-color:pink;
+}
+
+
+/*----------Banner-------------*/
+.banner{
+  width: 100%;
+  background:url('https://images.unsplash.com/photo-1502726299822-6f583f972e02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80') no-repeat center center;
+  -webkit-background-size: cover;
+  background-size:cover ;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.banner .info{
+ width: 340px;  
+ text-shadow: 1px 1px 2px #000;
+  margin-right: 80px;
+}
+@media (max-width:768px){
+  .banner{
+     justify-content: center;   
+  }
+}
+@media (max-width:768px){
+  .banner .info{
+     margin-right: 0;
+  }
+}
+.banner .info h3{
+   color:#fff;
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+.banner .info p{
+    color:#fff;  
+}
+
+/*----line------*/
+.line{
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom,#759E8F,#fff);
+  line-height: 60px;
+  font-size: 18px; 
+  text-indent: 1em;
+}
+.line span{
+  color:#fff;
+  
+}
+/*----content------*/
+
+.content{
+  width: 100%;  
+}
+.content .card{
+  float: left;
+  height: 250px;
+  width: 25%;
+  cursor:pointer;
+ position: relative;
+    overflow: hidden;
+}
+.content .card:hover::after{
+  content:'';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color:rgba(0,0,0,.5);
+  
+  
+}
+.content .card:hover::before{
+  content:'';
+  position: absolute;
+  display: block;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid #fff;
+  z-index:3;
+  
+}
+.content .card:hover img{
+   transform:scale(1.2,1.2);  
+}
+.content .card:hover span{
+  font-size: 20px;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%);
+}
+.content .card img{
+    min-height:100%; 
+    max-width:100%;
+   filter: contrast();
+   -webkit-filter: contrast(80%);
+  transition:all .3s;
+}
+@media (max-width:768px){
+  .content .card{
+     width: 33.3333%;
+  }
+}
+@media (max-width:600px){
+  .content .card{
+     width: 50%;
+  }
+}
+@media (max-width:400px){
+  .content .card{
+     width: 100%;
+  }
+}
+.content .card span{
+  position: absolute;
+ color:#fff;
+  bottom: 5px;
+  left: 5px;
+  z-index: 1;
+}
+
+ 
+.footer{
+  margin-top: 50px;
+  height: 80px;
+  color:white;
+  line-height: 80px;
+  text-align: center;
+  font-size: 12px;
+  background-color:#333333;
+  margin-bottom: 0;
+}
+
+   </style>
+   
+   <title>Nature</title>
+</head>
+<body>
+<div class="header">
+  <div class="container">
+    <div class="nav">
+      <i class="fas fa-hospital"></i>
+      <p>ADVENTURE CO.</p>
+      <ul>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">LOCATIONS</a></li>
+        <li><a href="#">NEWS & CLUBS</a></li>
+        <li><a href="#">FIELD PRPORTS</a></li>
+        <li><a href="#">SIGN IN</a></li>
+      </ul>
+    </div>
+
+    <div class="title">
+      <p>WE CAN NEVER HAVE ENOUGH OF</p>
+      <h1>NATURE</h1>
+      <span>UENRY DAVID T HOREAU</span>
+    </div>
+  </div>
+</div>
+  
+  <div class="banner">
+     <div class="info">
+       <h3>FEATURED LOCATION:DOMINICA</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur  odit blanditiis vero possimus delectus repudiandae illum autem itaque facilis accusantium natus doloribus impedit repellendus adipisci eum. Eaque dolor aliquam maiores laudantium, dignissimos quo quod omnis, nostrum aperiam quia voluptatibus impedit reiciendis in amet, reprehenderit perspiciatis! Expedita!</p>
+     </div>
+  </div>
+  <div class="line">
+    <div class="container"><span>GLOBAL HOT SPOTS</span></div>
+   
+  </div>
+  <div class="container">
+  <div class="content ">
+    <div class="card"><span>ARGENTINA</span><img src="https://images.unsplash.com/photo-1557178627-53f640932af8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80" alt=""></div>
+    <div class="card"><span>USA</span><img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80" alt=""></div>
+     <div class="card"><span>AMERICAN</span><img src="https://images.unsplash.com/photo-1531932768276-eb8b0770c5af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
+     <div class="card"><span>FUJI</span><img src="https://images.unsplash.com/photo-1553531768-a0f91bcfbd3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt=""></div>
+     <div class="card"><span>INDIA</span><img src="https://images.unsplash.com/photo-1528837516156-0a7225a43641?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=1191&q=80" alt=""></div>
+     <div class="card"><span>TAIWAN</span><img src="https://images.unsplash.com/photo-1503104538136-7491acef4d5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt=""></div>
+     <div class="card"><span>JAPAN</span><img src="https://images.unsplash.com/photo-1508231182810-1f85f3123078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80" alt=""></div>
+     <div class="card"><span>SIGAPORE</span><img src="https://images.unsplash.com/photo-1440989521967-eac50cbf9b24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt=""></div>
+  </div>
+  </div>
+  
+  <div class="footer">COPYRIGHT 2019 © EZTRUST TECHNOLOGY CO., LTD</div>
+</body>
+</html>

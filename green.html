@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+ul li{
+  list-style:none;
+}
+body{
+  font-family:"微軟正黑體";
+}
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+    height: 100%;
+ 
+ 
+}
+.row{
+  display: flex;
+  flex-wrap:wrap;
+ width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;   
+  padding-left: 0;
+  padding-right: 0;
+  
+}
+.header{
+  width: 100%;
+  height: 96px;
+  background-color: #fff;
+
+}
+.header .left{
+  display: flex;
+  align-items: center;
+}
+.header .logo{
+ 
+  width: 70px;
+  height: 80px;
+  background: url('https://images2.imgbox.com/ac/62/feaJfawV_o.png') no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover; 
+  border: 1px solid #000;
+}
+.header .name{
+ margin-left: 15px;
+}
+.header .name h1{
+  width: 300px;
+
+  letter-spacing: 3px;
+}
+.header .name p{
+  font-size: 18px; 
+}
+.header .lang a{
+  display:inline-block;
+  color:#fff;
+  font-size: 16px;
+  background-color:gray;
+  margin: 10px;
+  width: 79px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius:5px;
+}
+
+.nav{
+  width: 100%;
+  height: 33px;
+  background-color:#669900;
+
+}
+.nav ul{
+  width: 100%;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav li{ 
+ 
+  width: 100%;
+  text-align: center;
+box-shadow:1px 0px 2px rgba(0,0,0,.2) inset;
+}
+ 
+
+.nav li a{  
+   display: block;  
+  line-height: 33px;
+  color:#fff;
+    
+}
+
+.banner{
+  width: 100%;
+  height: 470px;
+  background-color:pink;
+}
+.product{
+  width: 100%;
+  height:215px;
+  background-color:gray;
+}
+.about {
+  width: 100%;
+  height: 349px;
+  background-color:red;
+}
+.intro{
+  width: 100%;
+  height: 287px;
+  background-color:yellow;
+}
+.footer{
+  width: 100%;
+  height: 247px;
+  background-color:skyblue;
+}
+ 
+
+
+  </style>
+</head>
+<body>
+<!--    <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="left">
+        <div class="logo"></div>
+          <div class="name">
+            <h1>科技有限公司</h1>
+             <p>FW.set TeamCity Co.Ltd</p>
+          </div>
+           </div>
+        
+      <div class="lang">
+        <a href="#">中文</a>
+        <a href="#">English</a>
+        <a href="#">日本語</a>
+      </div>
+      </div>
+    </div>
+     </div> -->
+ 
+  
+  
+  <div class="nav">
+   <div class="container">
+  
+    <ul>
+      <li><a href="#">公司簡介</a></li>
+      <li><a href="#">產品介紹</a></li>
+      <li><a href="#">工程實績</a></li>
+      <li><a href="#">最新消息</a></li>
+      <li><a href="#">檔案下載</a></li>
+      <li><a href="#">影片專區</a></li>
+      <li><a href="#">聯絡我們</a></li>
+    </ul>
+              
+         
+      
+
+     </div>
+  </div>
+  
+  
+  <div class="banner"></div>
+  <div class="product"></div>
+  <div class="about"></div>
+  <div class="intro"></div>
+  <div class="footer"></div>
+</body>
+</html>

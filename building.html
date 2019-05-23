@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+  <title>bulid</title>
+
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family:"微軟正黑體";
+}
+ 
+.navbar{
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background:url('https://images2.imgbox.com/51/0d/2mr6rQkO_o.gif');      
+  display: flex;
+  justify-content:space-around;
+  align-items: center;   
+  position: relative;
+   
+}
+
+.navbar .bars{     
+  color:#fff;
+  font-size: 30px;
+  display: none;
+  cursor:pointer;
+}
+@media (max-width:768px){
+  .navbar .bars{    
+    display: block; 
+  }
+}
+.navbar h1{
+  font-size: 40px;  
+  
+}
+.navbar span{
+  font-size: 23px;
+  display: block;
+  
+}
+.navbar a{
+  text-decoration: none;
+  color:#999;
+}
+.navbar a:hover{
+  color:#fff;
+}
+.navbar ul{
+  list-style:none;
+  display: flex;
+  transition:all 1s;
+}
+.navbar ul li{
+  text-align: center;
+  padding: 10px;
+ 
+}
+.navbar ul li a{
+  font-size: 18px;  
+}
+.navbar ul li span{
+  font-size: 1px;
+  margin-bottom: 15px;
+}
+.navbar ul li i{
+  font-size:28px;
+}
+.navbar ul li a:hover{
+  color:#386102;
+}
+.navbar ul li a:hover span{
+  color:white;
+}
+.navbar ul li a:hover i{
+  color:white;
+}
+@media (max-width:768px){
+  .navbar ul{
+    padding: 30px;
+    flex-direction: column;
+    position: absolute;
+    background-color:rgba(0,0,0,.8);
+    z-index: 1;
+    top: -1000px; 
+   right: 0;
+    height: 100vh;
+    width: 300px;    
+ }  
+}
+.openmenu{
+  top: 100px !important;
+}
+.banner{
+  width: 100%;
+  height: 500px;
+  background-color:#999;
+  background:url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background-position: center bottom;
+  -webkit-background-size: cover;
+  background-size:cover ;
+  position: relative;
+}
+.banner .title{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%; 
+  background-color: #fff;
+  padding-left: 1%;
+   padding-right: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  background-color:rgba(0,0,0,.8);
+  border-radius:0 50px 0 0;
+ }
+.left{
+  width: 45%;
+}
+.right{
+  width: 45%;
+  margin-left: 3%;
+  padding: 10px 0px;
+  position: relative;
+}
+.banner .right:before{
+  content:'';
+  position: absolute;
+  width: 6px;
+  height: 40px;
+  background-color: #fff;
+  left: -15%;
+  top: 50%;
+  transform:translate(50%,-50%)
+}
+@media (max-width:1000px){
+   .right:before {
+   left: -13%;
+  }
+}
+@media (max-width:900px){
+   .right {
+    display: none;
+  }
+  .left{
+    width: 80%;
+  }
+}
+@media(max-width:512px){
+  .banner .title{
+   width: 100%
+  }
+}
+.banner h4{  
+  font-size: 25px;
+  line-height: 60px;
+  letter-spacing:2px;
+}
+.banner span{
+  font-size: 10px;   
+}
+.service{
+  max-width:960px;
+  margin: 50px auto;  
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+   
+}
+.service .col{
+  width: 23%;
+  padding: 2%;
+}
+@media (max-width:768px){
+  .service .col{
+    width: 48%;
+  }
+}
+@media (max-width:512px){
+  .service .col{
+    width: 98%;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+}
+.service span{
+  display: inline-block;
+  padding:5px 10px;
+  border-radius:50%;
+  background-color:green;
+  color:#fff;
+  font-size: 25px;
+  margin-right: 10px;
+  transition:all 1s;
+}
+.service .col:hover span{
+   transform:rotate(360deg);
+}
+.service h3{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.service p{
+  font-size: 14px;
+  width: 80%;
+}
+
+
+.about{
+  height: 400px;
+  margin:0 auto;
+background-color: #eee;
+  
+  padding-right: 15px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 100px;
+    overflow: hidden;
+}
+.col{
+  width: 48%;
+  height: 100%;  
+  
+}
+@media (max-width:650px){
+  .about{
+    padding-left: 0;
+    padding-right: 0;
+  }
+ 
+  .about .left{
+    background-color:none;
+     width: 100%;
+  }
+  .about .right{
+    position: absolute;
+    width: 105%;
+    top: 0px;
+    left: -20px;
+ 
+    background-color:rgba(0,0,0,.4);
+    color:#fff !important;
+  }
+}
+.about .left{
+    background:url('https://images.unsplash.com/photo-1557780228-9a7cdb7bb8a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=592&q=80');
+   -webkit-background-size: cover;
+   background-size:cover ;
+
+  transition:all 1s;
+}
+.about .left:hover{
+  transform:scale(1.2,1.2)
+}
+.about .right{
+  padding: 20px;
+  color:#333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about .right h3{
+  font-size: 30px;
+ margin-bottom: 15px;
+}
+.about .right p{
+ font-size: 18px;
+}
+.footer{
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  text-align: center;
+  color:#fff;
+  line-height: 60px;
+}
+
+
+  </style>
+</head>
+<body>
+    <div class="navbar">
+    <div class="logo">
+        <h1><a href="#">LOGO 
+        <span>建築設計股份有限公司</span></h1>
+        </a>
+    </div>
+    
+ 
+    <ul class="menu">
+      <li><a href="#">首頁<span>Home</span><i class="fas fa-h-square"></i></a></li>
+      <li><a href="#">公司簡介<span>About</span><i class="fas fa-cogs"></i></i></a></li>
+      <li><a href="#">最新消息<span>News</span><i class="fas fa-copy"></i></a></li>
+      <li><a href="#">作品區<span>Works</span><i class="fas fa-edit"></i></a></li>
+      <li><a href="#">聯絡我們<span>Contact</span><i class="fas fa-envelope"></i></a></li>     
+  </ul>
+
+       <div class="bars"><i class="fas fa-bars"></i></div>
+  </div>
+  
+  <div class="banner">
+    <div class="title">
+      <div class="left">
+    <h4>逐夢踏實，挑望未來</h4>
+        </div>
+      <div class="right">
+        <span>Lorem ipsum dolor sit amet, iusto, molestiae impedit quidem nulla minus sunt earum nihil, et reiciendis enim nam.</span>
+      </div>    
+    </div>
+    </div>
+ 
+  <div class="service">
+   
+    <div class="col">
+     <h3> <span>A</span>專業施工規劃</h3>
+      <p>網頁設計的成立宗旨在於，將客戶的企業形象及服務透過網路呈，網頁設計的成立宗旨在於</p>
+    </div>
+    
+    <div class="col">
+     <h3> <span>B</span>專業施工規劃</h3>
+      <p>網頁設計的成立宗旨在於，將客戶的企業形象及服務透過網路呈，網頁設計的成立宗旨在於</p>
+    </div>
+    
+    <div class="col">
+     <h3> <span>C</span>專業施工規劃</h3>
+      <p>網頁設計的成立宗旨在於，將客戶的企業形象及服務透過網路呈，網頁設計的成立宗旨在於</p>
+    </div>
+    
+    <div class="col">
+     <h3> <span>D</span>專業施工規劃</h3>
+      <p>網頁設計的成立宗旨在於，將客戶的企業形象及服務透過網路呈，網頁設計的成立宗旨在於</p>
+    </div>
+   
+    
+  </div>
+  
+  
+  <div class="about">
+    <div class="col left"></div>
+    <div class="col right">
+      <h3>Lorem ipsum.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum corporis inventore, placeat, ullam excepturi quod iure tempora, incidunt at facere nemo vitae maiores quas! Quibusdam asperiores reiciendis tempora eius amet delectus nobis eos fuga explicabo laborum vitae, hic suscipit et animi blanditiis quaerat similique possimus. Possimus commodi, debitis molestias.</p>
+    </div>
+  </div>
+  <div class="footer">Copyright© All rights reserved.</div>
+
+
+  <script>
+    $(function(){
+  $('.bars').click(function(){
+     $('.navbar .menu').toggleClass('openmenu');
+     $(".fa-bars").toggleClass('fa-times');
+  })
+})
+  </script>
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  
+  <title>conner</title>
+
+  <style>
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  text-decoration: none;
+}
+body{
+ background-color: #333;
+  font-family: "Open Sans","微軟正黑體",sans-serif;
+ 
+}
+.navbar{
+  height: 80px; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 50px;   
+}
+@media (max-width:768px){
+  .navbar{
+  flex-direction: column;
+    height: auto;
+   text-align: center;
+  }
+}
+ 
+ 
+.navbar .icon a{
+   font-size: 23px;
+  color:#fff;
+  line-height: 60px;
+  padding: 10px;
+} 
+.navbar [type="search"]{
+  height: 35px;
+  width: 200px;
+  border:none;
+  border-bottom:1px solid #999 ;
+  background-color: #333;
+  margin-left: 10px;
+
+}
+.banner{
+ 
+  background-image: url('https://images.unsplash.com/photo-1465572089651-8fde36c892dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
+  background-repeat:no-repeat;
+  -webkit-background-size: cover;
+  background-size:cover;
+  height: 400px;
+  width: 100%;
+  margin:0px auto 100px;  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  overflow: hidden;
+
+}
+.banner h1{
+  color:white;   
+  font-size:4rem;
+ 
+  text-shadow: 2px 2px 10px #333;
+  letter-spacing:-2px;
+  position: relative;
+  
+}
+.banner h1:before{
+  content:'';
+  position: absolute;
+  width: 380px;
+  height: 3px;
+  top: 40px;
+  left: -20px;
+ box-shadow:2px 2px 1px 0px #999;
+  background-color:#fff;
+  
+  transform:rotate(-5deg);
+}
+.banner::before{
+   content:"";
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: -1px;
+  bottom: -1px;   
+  border-top: 80px solid transparent;     
+  border-right:1920px solid #333;
+}
+.banner::after{
+   content:"";
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  right: -1px;
+  top: -1px;   
+  border-bottom: 80px solid transparent;     
+  border-left:1920px solid #333;
+}
+@media (max-width:768px){
+  .banner::before{
+     border-top: 150px solid transparent;  
+  }
+  .banner::after{
+    border-bottom: 150px solid transparent; 
+  }
+}
+
+
+.content{
+  width: 100%;
+  overflow: hidden;
+  padding-top: 50px;
+   
+  margin-top: -70px;
+ 
+}
+.container{
+  max-width: 960px;   
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  margin-bottom: -10px;
+ 
+  
+}
+.card{
+ 
+  height: 100%;
+  width: 31.3333%;
+  padding:2%;
+  
+ 
+ 
+}
+@media (max-width:768px){
+  .card{
+    width: 45%;
+  }
+   .container{
+    justify-content: center;
+  }
+  .card3{
+      
+    margin-top: 0px !important;
+  }
+  .card4{   
+    margin-top: -25px !important;
+  }
+     .card5{   
+    margin-top: 5px !important;
+  }
+      .card6{   
+    margin-top: -20px !important;
+  }
+  
+}
+@media (max-width:512px){
+  .card{
+    width: 70%;
+  }
+  .card{
+    margin-top:10px !important;
+  }
+}
+.cardhead{
+  width: 100%; 
+  position: relative;
+  cursor:pointer;  
+  
+
+}
+.cardhead::after{
+  content:"";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;   
+  border-bottom: 30px solid transparent;     
+  border-left:300px solid #333;
+
+}
+  
+.cardhead img{
+ max-width: 100%;
+  
+  
+}
+.cardbody{
+  width: 100%;
+  margin-top: -10px;
+  padding: 25px;
+  background-color: #fff; 
+  line-height: 1.3;
+  
+}
+.cardbody h3{
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+.cardbody p{
+  font-size: 18px;
+  color:#555;
+}
+.cardfooter{
+  width: 100%;  
+  background-color:#23b6b6;
+  position: relative;
+  box-sizing:border-box;   
+   
+}
+.cardfooter a{
+  display: block;
+  text-decoration: none;
+  padding: 25px;
+  font-size: 18px;
+  color:#fff;
+  transition:all 0.5s;
+}
+.cardfooter:hover{
+  background-color:#111;
+  
+}
+.cardfooter::after{
+  content:"";
+  display: block;
+  width: 0px;
+  position: absolute;
+  height:0px;
+  left: 0px;
+  bottom: 0px;   
+  border-top: 30px solid transparent;     
+  border-right:450px solid #333;
+}
+
+.footer{
+  height: 200px;
+  width: 100%;
+  background-color: #666;
+  overflow: hidden;
+  line-height: 200px;
+  color:#fff;
+  position: relative;
+  margin-bottom: 0;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.footer:before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  left: 0px;  
+  border-right:1920px solid transparent;
+  border-top:100px solid #333;
+ 
+}
+.footercontainer{
+  max-width:960px;
+  margin: 0 auto;
+  
+  line-height: 290px;
+}
+
+@media (max-width:960px){
+  .footer{
+     text-align: center;
+    font-size: 15px;
+  }
+}
+
+
+
+.navbar .burger {
+  color:#fff;
+  font-size: 40px;
+  line-height: 60px;
+  cursor:pointer;
+  transition:all 1s;
+  z-index: 10;
+   
+  
+}
+
+ 
+.nav {
+  color:#fff;
+  width: 300px;
+  height: 100vh;
+  background-color: #222;
+  
+  position:fixed;  
+  top: 0;
+  left:-300px;
+  transition:all 1s;
+  z-index: 2;
+  overflow:scroll
+}
+@media (max-width:512px){
+  .nav{
+   width: 100%;
+   padding-top: 50px;
+   left: -512px;
+  }
+}
+.nav ul li{
+  list-style:none; 
+  border-bottom: 1px solid #999;
+}
+.nav ul li a{
+  text-decoration: none;
+  display: block;
+  padding: 10px; 
+  color:#fff;
+  font-size: 18px; 
+  transition:all .5s;
+}
+.nav ul li a:hover{
+   color:#23B6B6;
+   margin-left: 15px;
+}
+.nav .menu{   
+  width: 100%;
+  padding: 25px;
+}
+
+.menu .sub1{
+  margin-left: 10px;
+  display: none;
+}
+.menu .sub1 a{
+  font-size: 15px;
+}
+.menu .sub1 li:nth-child(2){
+ border-bottom: none;
+}
+.menu .sub2{
+  margin-left: 10px;
+  display: none;
+}
+
+.nav .box{
+ padding: 25px;  
+}
+.nav .box h3{
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.nav form{
+  padding: 25px;
+}
+.nav form input[type="search"]{
+  height: 40px;
+  width: 180px;
+  border-radius:4px;
+  color:#666;
+  display: block;
+}
+.nav form input[type="button"]{
+  background-color:#23B6B6;
+  height: 40px;
+  width: 70px;
+  color:#fff;
+  border: none;
+  margin-top: 5px;
+  cursor:pointer;
+}
+.nav form input[type="button"]:hover{
+  background-color:#333;
+}
+.nav .cate{
+  padding-left: 25px;
+  padding-right: 25px;  
+}
+.nav .cate h3{
+  font-size: 25px;
+}
+.nav .cate ul{
+  margin-top: 15px;
+  margin-bottom: 80px;
+}
+.nav .cate li{
+  border:none;
+}
+.nav .cate li a{
+  font-size: 15px;
+  line-height:10px;
+}
+.nav .cate li a:hover{
+  margin-left: 0;
+}
+
+
+
+
+
+ .goleft{
+  left:0px;
+}
+.goleft2{
+  margin-left: 300px;
+}
+@media (max-width:768px){
+  .goleft2{
+      margin-left:0px;
+    
+  }
+}
+
+  </style>
+</head>
+<body>
+ <div class="navbar">
+
+   <div class="burger"><i class="fas fa-bars toggle"></i></i></div>
+   <div class="icon">
+    <a href="#"> <i class="fab fa-facebook"></i></a>
+     <a href="#"> <i class="fab fa-twitter"></i></a>
+    <a href="#"> <i class="fab fa-line"></i></a>
+     <a href="#"> <i class="fab fa-youtube"></i></a>
+     <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
+   <input type="search" placeholder="search...">
+   </div>    
+  </div>
+  
+  <div class="nav">  
+  <ul class="menu">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">SAMPLEPOST</a></li>
+    <li class="menutoggle"><a href="#">ACCORDION&nbsp;&nbsp;<span class="span1">+</span></a>
+      
+  
+      <ul class="sub1">
+         <li><a href="#">News</a></li>
+         <li class="subtoggle"><a href="#">Fashion&nbsp;&nbsp;<span class="span2">+</span></a></li>
+           
+           
+      <ul class="sub2">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+       </ul>       
+      </ul>
+      
+    </li>
+    <li><a href="#">CONTACT</a></li>
+    <li><a href="#">FREE DOWNLOAD</a></li>
+  </ul>  
+    <div class="box">
+      <h3>Lorem Ipsum</h3>
+      <p>Lorem ipsum dolor  culpa porro officia. Nemo id incidunt asperiores laboriosam alias quas quae, libero ea numquam blanditiis quia explicabo odit consequatur dicta, nihil provident necessitatibus. Cupiditate deleniti minima fuga rem, eaque ipsum mollitia.</p>
+    </div>
+    
+    <form action="">
+    <input type="search" placeholder="Search ...">
+    <input type="button" value="Search">
+    </form>
+    
+    <div class="cate">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">#Fashion</a></li>
+        <li><a href="#">#Men</a></li>
+        <li><a href="#">#News</a></li>
+        <li><a href="#">#Women</a></li>
+      </ul>
+    </div>
+    
+  </div>   
+
+  
+  <div class="banner">
+   <a href="#"> <h1>LOGOHERE</h1></a>
+  </div>
+    
+
+
+ <div class="content">
+  <div class="container">
+    
+    <div class="card card1">
+       <div class="cardhead"><span class="mask"></span><img src="http://lorempixel.com/output/sports-q-c-640-480-5.jpg" alt=""></div>
+      <div class="cardbody">
+        <h3>Torquatus dixit.1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. Immo alio genere; Omnes enim iucundum motum, quo sensus hilaretur. Ut in geometria, prima si dederis, danda[…]</p>
+      </div>
+      <div class="cardfooter"><a href="#">continue read ...</a></div>
+    </div>
+    
+    
+    <div class="card card2" style="margin-top:-30px">
+       <div class="cardhead"><span class="mask"></span><img src="http://lorempixel.com/output/nature-q-c-640-480-4.jpg" alt=""></div>
+      <div class="cardbody">
+        <h3>Torquatus dixit.2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. Immo alio genere; Omnes enim iucundum motum, quo sensus hilaretur. Ut in geometria, prima si dederis, danda[…]</p>
+      </div>
+      <div class="cardfooter"><a href="#">continue read ...</a></div>
+    </div>
+    
+    
+    <div class="card card3" style="margin-top:-55px">
+       <div class="cardhead"><span class="mask"></span><img src="http://lorempixel.com/output/people-q-c-640-480-1.jpg" alt=""></div>
+      <div class="cardbody">
+        <h3>Torquatus dixit.3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. Immo alio genere; Omnes enim iucundum motum, quo sensus hilaretur. Ut in geometria, prima si dederis, danda[…]</p>
+      </div>
+      <div class="cardfooter"><a href="#">continue read ...</a></div>
+    </div>
+    
+    
+    <div class="card card4">
+       <div class="cardhead"><span class="mask"></span><img src="http://lorempixel.com/output/people-q-c-640-480-2.jpg" alt=""></div>
+      <div class="cardbody">
+        <h3>Torquatus dixit.4</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. Immo alio genere; Omnes enim iucundum motum, quo sensus hilaretur. Ut in geometria, prima si dederis, danda[…]</p>
+      </div>
+      <div class="cardfooter"><a href="#">continue read ...</a></div>
+    </div>
+    
+    
+    <div class="card card5" style="margin-top:-30px">
+       <div class="cardhead"><span class="mask"></span><img src="http://lorempixel.com/output/people-q-c-640-480-5.jpg" alt=""></div>
+      <div class="cardbody">
+        <h3>Torquatus dixit.5</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. Immo alio genere; Omnes enim iucundum motum, quo sensus hilaretur. Ut in geometria, prima si dederis, danda[…]</p>
+      </div>
+      <div class="cardfooter"><a href="#">continue read ...</a></div>
+    </div>
+    
+    
+    <div class="card card6" style="margin-top:-55px">
+       <div class="cardhead"><span class="mask"></span><img src="http://lorempixel.com/output/sports-q-c-640-480-2.jpg" alt=""></div>
+      <div class="cardbody">
+        <h3>Torquatus dixit.6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. Immo alio genere; Omnes enim iucundum motum, quo sensus hilaretur. Ut in geometria, prima si dederis, danda[…]</p>
+      </div>
+      <div class="cardfooter"><a href="#">continue read ...</a></div>
+    </div>      
+ </div> 
+
+ 
+<div class="footer">
+ <div class="footercontainer">
+  Proudly powered by w3c | Theme:slide by Willson.
+  </div>  
+</div>
+
+<script>
+  $(function(){
+  $('.fa-bars').click(function(){
+    $('.nav').toggleClass('goleft');
+    $(this).toggleClass('goleft2');
+    $(this).toggleClass('fa-times');
+   });
+  $('.menutoggle').click(function(e){   
+        
+
+    $('.sub1').slideToggle();    
+     $('.span1').toggleText('+','-')
+        
+    return false;
+  })
+  $('.subtoggle').click(function(e){   
+       
+    
+    $('.sub2').slideToggle();
+      $('.span2').toggleText('+','-')
+    return false;
+  })
+  
+ 
+   $.fn.extend({
+    toggleText: function(a, b){
+        return this.text(this.text() == '+' ? '-' : '+');
+    }
+ 
+  
+});
+  
+})
+</script>
+ 
+</body>
+</html>
