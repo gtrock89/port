@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">  
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <title>Green</title>
   <style>
-    *{
+   *{
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -48,35 +49,30 @@ body{
   justify-content: space-between;
   height: 100%;   
   padding-left: 0;
-  padding-right: 0;
-  
+  padding-right: 0;  
 }
 .header{
   width: 100%;
   height: 96px;
   background-color: #fff;
-
 }
 .header .left{
   display: flex;
   align-items: center;
 }
-.header .logo{
- 
+.header .logo{ 
   width: 70px;
   height: 80px;
   background: url('https://images2.imgbox.com/ac/62/feaJfawV_o.png') no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
-  background-size: cover; 
-  
+  background-size: cover;   
 }
 .header .name{
  margin-left: 15px;
 }
 .header .name h1{
   width: 300px;
-
   letter-spacing: 3px;
 }
 .header .name p{
@@ -97,7 +93,25 @@ body{
   background-color: #666;
 }
 @media (max-width:768px){
-  .header .lang{
+  .header{
+    height: auto;  
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+  }
+  .header .row{
+    width: auto;
+
+    justify-content: center;
+  }
+  .header .left{
+
+   
+  }
+  .header .left h1{
+    width: 200px;
+  }
+  .header .lang {
     display: none;
   }
 }
@@ -105,71 +119,195 @@ body{
   width: 100%;
   height: 33px;
   background-color:#669900;
+ 
+ 
+}
+.nav .container{
+  display: flex;
+  justify-content: center;
 }
 .nav ul{
   width: 100%;
-  padding-right: 15px;
-  display: flex;
-  justify-content: space-between;
+  height: 100%; 
+ 
 }
 .nav li{  
-  width: 100%;
+  width: 14.2857%;
+  display: inline-block;
+  float: left;
   text-align: center;
   box-shadow:1px 0px 2px rgba(0,0,0,.2) inset;
 } 
 .nav li a{  
-   display: block;  
+   display: block; 
+  width: 100%;
   line-height: 33px;
   color:#fff;  
   
 }
 .nav li a:hover{
-  background-color: #336600;
- 
+  background-color: #336600; 
 }
+ .mobnav{ 
+   height: 44px;
+   background-color: #669900;
+   text-align: center;   
+   display: none;
+   cursor:pointer;
+}
+.mobnav span{
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  position: relative;
+}
+.mobnav span:before{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 10px;  
+}
+.mobnav span:after{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: -10px;  
+}
+.opennav{
+  height: auto !important;
+}
+
+
+@media (max-width:667px){
+  .nav{
+    height: 44px;
+    position: relative; 
+    
+  }
+  .nav ul{
+   flex-direction: column;
+   position: absolute;
+   top:44px;
+    left: 0;
+    z-index: 99;
+   width: 100%;
+    height: 0;
+    background-color:#669900;
+   align-items: center;
+    overflow: hidden;
+  }
+  .nav li{
+    width: 100%;
+    
+  }
+  .nav li a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .mobnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
 .banner{
   width: 100%;
   height: 470px;
-  background-image: url(https://images.unsplash.com/photo-1555910889-0607773e7213?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80);
-  -webkit-background-size: cover;
-  background-size:cover ;
-  background-position: center center;
+  clear:both;
   position: relative;
 }
-.banner:before{
-  content: '<';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color:#fffffd;
-  font-size: 30px;
-  border-radius:0 5px 5px 0px ;
+
+ 
+.banner .items{  
+  height: 470px;
+  -webkit-background-size: cover;
+  background-size:cover;
+  background-position: center center;
+  margin: 0 auto; 
+}
+.banner.owl-carousel .owl-nav{ 
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  transform:translateY(-50%);
-  cursor:pointer;
-}
-.banner:after{
-  content: '>';
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color:#fffffd;
-  font-size: 30px;
-  border-radius:5px 0px 0px 5px ;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform:translateY(-50%);
-  cursor:pointer;
+  justify-content: space-between;
+  align-items: center;    
 }
+.banner.owl-carousel .owl-nav button{
+ background-color:#fff;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  outline:none;
+}
+.banner.owl-carousel .owl-nav button.owl-prev{
+   border-radius:0px 5px 5px 0px ;
+}
+.banner.owl-carousel .owl-nav button.owl-next{
+  border-radius:5px 0px 0px 5px ;
+}
+.banner .caption{
+  font-family:  'Nunito' ,'Kosugi Maru', sans-serif;
  
- 
+}
+.banner .caption p{
+  font-size: 30px;
+  font-weight: bold;
+  color:#222;
+  text-shadow: 1px 1px 5px #fff,-1px -1px 5px #fff;
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  
+}
+.banner .caption .green{
+  color:#2F782F;
+}
+.banner .caption .subtitle{
+  font-size: 13px;
+  color:#55AEE9;
+  font-weight: bold;
+    text-shadow: 0px 0px 20px #fff ;
+  position: absolute;
+  top: 20%;
+  left: 13%;
+  
+}
+.banner .caption .subtitle2{
+  font-size: 13px;
+  color:#55AEE9;
+  background-color:rgba(0,0,0,.5);
+  padding: 10px;
+  font-weight: bold;
+   text-shadow: 0px 0px 20px #fff ;
+  position: absolute;
+  top: 20%;
+  left: 13%;  
+}
+@media (max-width:576px){
+  .banner .caption .subtitle{
+     left: 8%;
+  }
+  .banner .caption .subtitle2{
+     left:8%;
+  }
+}
+
+
 
 .product{
   width: 100%;
@@ -185,6 +323,8 @@ body{
 .product .col{
   width: 23%;
   height: 215px;
+  position: relative;
+  z-index: 5;
  
 }
 .product .bg{
@@ -202,7 +342,7 @@ body{
   text-align: center;
   transform:translateY(-50%);
   color:#fff;
-  font-size: 25px;
+  font-size: 18px;
   font-weight:bold;
   opacity: 0;
   transition:.4s;
@@ -237,6 +377,21 @@ body{
   line-height: 44px;
   height: 44px;
 }
+@media (max-width:667px){
+  .product .wrap{
+    position: relative;
+    top: 0;
+  }
+  .product {
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .product .col{
+    width: 48%;
+    margin-top: 5%;
+  }
+}
 
 .about {
   width: 100%;
@@ -244,6 +399,7 @@ body{
   background-color:#99cc99;
   position: relative;
   overflow: hidden;
+  border-top: 3px solid #54a10c;
 }
 .about .word{
   display: flex;
@@ -253,7 +409,7 @@ body{
   height: 100%;
   background-color:#99cc99;
   z-index: 5;
-  box-shadow:0 0 70px 50px #99cc99;
+  box-shadow:0 0 30px 60px #99cc99;
  
 }
 .about .word h2{
@@ -272,11 +428,33 @@ body{
   background-image:url('https://images.unsplash.com/photo-1551471721-d3f1783e3603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80');
   background-position: center center;
   width: 100%;
-  height: 100%;
+  height: 100%;  
   position: absolute;
-
   left: 50%;  
 }
+@media (max-width:768px){
+  .about{
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .about .word{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow:none;
+  }
+  
+  .about .pic{
+    margin-top: 30px;
+    height: 300px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+
+
 .intro{
   width: 100%;  
   height: auto;
@@ -338,25 +516,158 @@ body{
 
 
 .footer{
+  width: 100%; 
+  background-color:#363636; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer h3{
+  color:#719f17;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.top{
   width: 100%;
-  height: 100px;
-  background-color:#333;
-  color:#fff;
+  padding-bottom: 20px;
+ border-bottom: 3px solid #6a981a;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
+}
+.top .quick{
+  width: 50%;
+  height: 100%; 
+}
+.top li{
+  float: left;   
+  width: 31.33%;
+  margin-right: 2%; 
+  margin-bottom: 2%; 
+}
+.top li a{
+  display: block;
+  padding: 3%;  
+  text-align: center;
+  color:#c2c2c2;
+  font-size: 13px;
+  border: 2px solid #c2c2c2;
+  border-radius:5px;
+}
+.top li a:hover{
+  background-color: #c2c2c2;
+  color:#333;
+}
+.top .contact{
+  width: 20%;
+  height: 100%;
+}
+.top .contact p{
+  line-height: 1.6;
+  color:#c2c2c2;
+}
+.top .qrcode{
+  width: 12%;
+  height: 100%;
+
+}
+.bottom{
+  width: 100%;
+  color:#626262;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 10px;
+ 
+ 
+}
+.bottom .left{
+  display: flex;
+  
+}
+.bottom .right{
+ 
+  display: flex;
   align-items: center;
+}
+ 
+.bottom .face{
+  margin-left: 10px;
+  background-color:#407400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  color:#fff;
+  font-weight: bold;
+  border-radius:5px ;
 }
 .footer span{
   background:url('https://images2.imgbox.com/ac/62/feaJfawV_o.png') no-repeat center center;
   -webkit-background-size: cover;
   background-size:cover;
-  display: block;
+  display: inline-block;
   width: 40px;
-  height: 40px;
+  height: 40px; 
+  margin-right: 5px;
 }
+.footer .left .mob{
+  display: none;
+}
+@media (max-width:768px){
+  .footer{
+  }
+  .footer .top{
+    align-items: center;
+    justify-content:center;
+    
+  }
+  .footer .top .quick{
+    width: 60%;
+   
+  }
+  .footer .contact{
+   width: 30%;
+    margin-left: 20px;
+  }
+  .footer .top .qrcode{
+    display: none;
+  }
+  .footer .bottom p{
+    display: none;
+  }
+  .footer .left{
+    align-items: center;
+  
+  }
+  .footer .left .mob{
+    display: block;
+  }
+}
+
+@media (max-width:568px){
+  .footer .top{
+    display: block;    
+    display: flex;
+    flex-wrap:wrap;
+   justify-content: flex-start;
+     
+  }
+  .footer .top .quick{
+     display: block;
  
-
-
+    width: 100%;
+  }
+  .footer .contact{
+  margin-top: 15px;
+     width: 70%;
+    margin-left: 0;
+  }
+   .footer .top .qrcode{
+    display: block;
+     width: 30%;
+  } 
+  
+}
   </style>
 </head>
 <body>
@@ -381,8 +692,9 @@ body{
      </div>  
     
      
-     
+ 
      <div class="nav">
+       
    <div class="container">
      
     <ul>
@@ -392,18 +704,35 @@ body{
       <li><a href="#">最新消息</a></li>
       <li><a href="#">檔案下載</a></li>
       <li><a href="#">影片專區</a></li>
-      <li><a href="#" style=" box-shadow:0px 0px 1px 0px rgba(0,0,0,.2) inset;">聯絡我們</a></li>
-    </ul>
-              
-         
-      
-   
+      <li><a href="#" style=" box-shadow:-1px 0px 3px 0px rgba(0,0,0,.2) inset;">聯絡我們</a></li>
+    </ul> 
+         <div class="mobnav"><span></span></div>
+     </div>       
      </div>
-     </div>
-     
-     
-     <div class="banner animated   bounce"  ></div>
-     
+       
+ 
+     <div class="banner owl-carousel">
+        <div class="items" style="background-image: url(https://images.unsplash.com/photo-1555910889-0607773e7213?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80);">
+          <div class="caption">
+            <p> 永續<span class="green">環保</span> ‧ 科技<span class="green">能源</span></p> 
+            <span class="subtitle">SUSTAINABLE ENVIRONMENTAL PROTECTION<br>SCIENCE AND TECHNOLOGY ENERGY</span>
+          </div>
+        </div>
+        <div class="items" style="background-image:url(https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80)">
+           <div class="caption">
+            <p> 永續<span class="green">環保</span> ‧ 科技<span class="green">能源</span></p> 
+            <span class="subtitle2">SUSTAINABLE ENVIRONMENTAL PROTECTION<br>SCIENCE AND TECHNOLOGY ENERGY</span>
+          </div>
+        </div>
+       <div class="items" style="background-image:url(https://images.unsplash.com/photo-1452798991096-382940996d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80)">
+          <div class="caption">
+            <p> 永續<span class="green">環保</span> ‧ 科技<span class="green">能源</span></p> 
+            <span class="subtitle2">SUSTAINABLE ENVIRONMENTAL PROTECTION<br>SCIENCE AND TECHNOLOGY ENERGY</span>
+          </div>
+       </div>  
+  </div>
+    
+       
      <div class="product">
     <div class="wrap">
     <div class="container">
@@ -450,13 +779,15 @@ body{
     <div class="container">
       <div class="row">
           <div class="word">
-      <h2>關於這家科技公司</h2>
-      <p>本公司成立於1964年。擁有超過50年歷史，國內自設厰房、經驗豐富。
-承接港九新界墓碑建造、修建，骨龕工程，提供火化及土葬之殯葬一條龍服務。
-業務範圍包括: 批發及零售墓石、雲石、奠基石。
-售賣各類骨灰盅，鮮花訂造。
-本公司為香港華人永遠墳場管理委員會、天主教墳場及佛教墳場之合法認可承辦商。
-提供專業服務及意見。歡迎致電查詢、免費報價。</p>
+      <h2>關於科技公司</h2>
+      <p>本公司成立於民國 73 年，歷經20年經營,目前擁有全省8家分公司, 中國大陸4間銷售點，為全國最大防火建材通路商. 
+
+1.主要經營項目為各項高級防火、防水建材之批發買賣及輕鋼架工程之承作 
+2.在董事長及幹部努力經營下, 業績及獲利皆逐年穩健成長 
+3.員工平均年齡35歲, 上下溝通管道順暢 
+4.財務結構健全, 銀行往來信用良好 
+5.經營者對員工照顧有加, 分紅不落人後 
+6.注重員工福利及職涯規劃,開放員工入股</p>
     </div>
    
 
@@ -523,11 +854,78 @@ body{
     
     
   </div>
-  <div class="footer"><span></span>Copyright© All rights reserved.</div>
+  
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        
+            <div class="top">
+              <div class="quick">
+                <h3>網站地圖</h3>
+                <ul>
+                  <li><a href="#">公司簡介</a></li>
+                  <li><a href="#">產品介紹</a></li>
+                  <li><a href="#">工程實績</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">檔案下載</a></li>
+                  <li><a href="#">影片專區</a></li>
+                  <li><a href="#">聯絡我們</a></li>
+                </ul>
+              </div>
+              
+              
+              <div class="contact">
+                <h3>聯絡我們</h3>
+                <p>+886-4-2358-3999</p>
+                 <p>+886-4-2358-3999</p>
+                 <p>service@gmail.com</p>
+              </div>
+              <div class="qrcode">
+                <img src="https://cdn.qrstuff.com/images/default_qrcode.png" alt="">
+              </div>
+            </div>
+        
+           
+        <div class="bottom">
+         <div class="left">
+          <span></span>
+          <p>Copyright© All rights reserved.<br>
+           Website Design By e-Giant. B2B Global-Trade.Global Machine, Global Bicycle. Shopping Higo.
+           </p> 
+           <p class="mob">Copyright© All rights reserved.</p>
+          </div>
+            <div class="right">
+              Find us  <div class="face">F</div>
+            </div>
+          
+          </div>
+     
+      </div>     
+    </div>
+    
+    
+
+  
+  </div>
   
   
-  <script>
-       $('.owl-carousel').owlCarousel({
+    <script>
+        $(document).ready(function() {
+ 
+ 
+ 
+$(".banner").owlCarousel({
+items: 1, // 一次輪播幾個項目
+loop: true, // 循環輪播
+margin: 0, // 與右邊圖片的距離
+nav: true, // 導航文字
+autoplay: true, // 自動輪播
+autoplayTimeout: 3000, // 切換時間
+autoplayHoverPause: true // 滑鼠經過時暫停
+});
+ 
+
+  $('.slide').owlCarousel({
      margin:15,
      resposiveClass:true,
      responsive:{
@@ -542,7 +940,17 @@ body{
        },
      }
    });
+     
+     
+   $('.mobnav').click(function(){
+    $('.nav ul').toggleClass('opennav');
+   });  
+
+});
+      
+
   </script>
+  
   
   
 </body>
