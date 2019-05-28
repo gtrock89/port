@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  
+  
+  <title>sport</title>
+  <style>
+  *{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color: #171717;
+  font-family:"微軟正黑體";
+}
+ul li{
+  list-style-type:none;
+}
+a{
+  text-decoration: none;
+  color:#fff;
+}
+img{
+    max-width:100%;
+   display: block; 
+}
+.header{
+  max-width: 1366px;
+  height: 120px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color:#000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a{
+  display: flex;
+  align-items: center;
+}
+.header h1{
+   font-size: 50px;
+ margin-right: 10px;
+  letter-spacing: 3px;
+}
+.header span{
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.nav{
+  max-width:1366px;
+  height:40px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color:#000;
+  border-top: 1px solid #232323;
+  border-bottom: 2px solid #232323;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.nav ul{
+  height: 100%;   
+}
+.nav li{
+  display: inline-block;
+  float: left;
+  height: 100%; 
+}
+.nav li a{
+  display: block;
+  height: 100%;
+  line-height: 40px;
+  text-align: center; 
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  font-size: 18px;
+  
+}
+.nav li a:hover{
+  color:#1E6699;
+}
+.nav li a:before{
+  content:'';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color:#1E6699;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition:.5s;
+  transform:scale(0,1)
+}
+.nav li a:hover:before{
+   transform:scale(.7,1)
+}
+.nav input{
+   width: 90%;
+  background-color:green;
+  border: none;
+   font-size: 30px;
+  display: none;
+}
+.nav button{
+  background-color:#000;
+  color:#fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  cursor:pointer;
+  transition:.5s;
+}
+.nav button:hover{
+  color:#1E6699;
+}
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.row{
+  display: flex;
+  flex-wrap:wrap;
+  height: 100%;
+  width: 100%;
+}
+.col-7{
+  width: 65%;
+  height:auto;  
+}
+
+@media (max-width:768px){
+  .col-7{
+    width: 100%;
+  }
+  .col-3{
+    width: 100%;
+  }
+} 
+.top{
+  max-width:1140px;
+  height: auto;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: space-between;
+}
+.top .col-5{
+  width: 49.8%;
+  height: auto;
+  position: relative;
+  overflow: hidden;   
+}
+ .top .col-3{
+  width: 32.8888%;
+  height:auto;
+  margin-top: 0.4%;
+  position: relative;
+  overflow: hidden;
+   font-size: 12px;
+} 
+.top .col-5:before{
+  content: '推薦';
+  position: absolute;
+  background-color: #1E6699;
+  color:#fff;
+  font-size: 12px;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  z-index: 9;
+}
+.top .col-3:before{
+  content: '新聞';
+  position: absolute;
+  background-color: #1E6699;
+  padding: 5px 10px;
+  font-size: 12px;
+  color:#fff;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.top img{
+  width: 100%;
+  display: block;
+  transition:.4s;
+}
+.top .col-5:hover img{
+  transform:scale(1.1);
+}
+.top .col-3:hover img{
+  transform:scale(1.1);
+}
+ 
+.top .title{
+  width: 80%;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color:#fff;
+  text-shadow:1px 1px 10px #333;
+  font-weight: bold;
+  z-index: 99;
+}
+.top span{
+  font-weight: bold;
+  font-size: 10px;
+  margin-right: 10px;
+}
+@media (max-width:700px){
+  .top .col-5{
+    width: 100%;
+    margin-top: .5%;
+  }
+  .top .col-3{
+    width: 100%;
+    font-size: 16px;
+  }
+}
+.date{
+  font-size: 10px;
+  color:#999;
+}
+
+.content{
+  color:white;
+}
+.content .news img{
+  margin-bottom: 10px;
+}
+.content .news h2{
+  margin-bottom: 15px;
+}
+.content .news span{
+  font-size: 12px;
+  color:#999; 
+}
+.content .news .author{
+  margin-right: 15px;
+  
+}
+.content .news .date:before{
+  content: '';
+  display: inline-block;
+  background-color: transparent;
+  width: 10px;
+  height: 1px;
+}
+.content .news .date{
+  position: relative;
+}
+.content .news .date:after{
+  content: '';
+  display: inline-block;
+  background-color: #999;
+  width: 10px;
+  height: 1px;
+  vertical-align:center;
+  position: absolute;
+  left: -5%;
+  top: 50%;
+}
+.news .share{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 30px;
+   
+}
+.content .news .sha{
+  border: .5px solid #999;
+  color:#fff ;
+ line-height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  border-radius:3px;
+}
+.news .sha i{
+  margin-right: 5px;
+}
+.news .sha:after{
+  content: ''; 
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-width:6px 0px 6px 7px;
+  border-style:solid;
+  border-color:transparent transparent transparent #999;  
+  position: absolute;
+  right: -7px;
+  top: 9px;
+ 
+}
+.news .sha:before{
+   content: ''; 
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-width:6px 0px 6px 7px;
+  border-style:solid;
+  border-color:transparent transparent transparent #333;  
+  position: absolute;
+  right: -6px;
+  top: 9px;
+  z-index: 1;
+ 
+}
+.news .face{
+  font-size: 12px;
+  border: .5px solid #999;
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius:3px;
+  margin-right: 5px;
+}
+.news .face i{
+  margin-right: 8px;
+}
+.news p{
+  margin-bottom: 30px;
+}
+.news ol{
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.news .pic4{
+   text-align: center;
+   
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.news .pic4 img{
+  width: 40%; 
+  height: 100%;
+  margin : 1%;
+}
+.subtitle:before{
+  content: '';
+  display: inline-block;
+  height: 28px;
+  width: 8px;
+  background-color:#4889F4;
+  margin-right: 10px;
+  vertical-align:bottom;
+}
+.picfrom{
+  margin-top: 15px;
+}
+.unline{
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+}
+.unline:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color:#1D5D9A;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition:.4s;
+}
+.unline:hover:before{
+  background-color: #3B81CB;
+  height: 90%;
+}
+.tags{
+  margin-top: 20px;
+  font-size: 10px;
+}
+.tags i{
+  color:#fff;
+}
+.tags span{  
+  display: inline-block;
+  line-height: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius:15px;
+  background-color: #444;
+  margin-right: 5px;
+}
+.tags .tag{
+  display: inline-block;
+ margin-right: 5px;
+  line-height: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+   border-radius:15px;
+  background-color: #fff;
+  color:#5d5d5d;
+  font-weight: bold;
+  transition:.4s;
+  border: 1px solid #D4D4D4;
+}
+.tags .tag:hover{
+  background-color:#1E73BE;
+  color:#fff;
+  border: 1px solid #1E73BE;
+}
+
+.intro{
+  margin: 80px auto;
+  width: 75%;  
+  padding: 40px;
+  background-color:brown;
+  color:#fff;
+  position: relative;
+
+}
+.intro i{
+  font-size: 25px;
+  background-color:brown;
+  border-radius:50%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+}
+.morenews{
+
+}
+.morenews h2{
+  color:#444;
+  font-size: 15px;
+  padding-bottom: 15px;
+  border-bottom: .5px solid #444;
+  margin-bottom: 25px;
+}
+ 
+.morenews .content{
+  margin-top: 15px;
+
+}
+.morenews .card{
+  display: flex;
+  justify-content: space-between;
+  max-height: 180px;
+  position: relative;
+  margin-bottom: 20px;  
+}
+.morenews img{
+  display: block;
+  width: 48%; 
+}
+.morenews .info{
+  width: 48%;
+  margin-top: 5px;
+  max-height: 10.5em;
+  overflow: hidden;
+}
+.info h3:hover{
+  color:#1E73BE;
+}
+.info .author{
+  font-size: 10px;
+  margin-right: 10px;
+  color:#949494;
+}
+.info p{
+  margin-top: 5px;
+  color:#949494;
+  font-size: 14px;
+}
+.cls{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background-color:#1E73BE;
+   font-size: 13px;
+   padding: 5px 10px;
+}
+@media (max-width:598px){
+  .morenews .card{
+    height: 120px;
+  }
+}
+@media (max-width:479px){
+  .morenews .card{
+    height: 80px;
+  }
+}
+
+
+.hot{
+  margin-top: 50px;
+}
+.hot h2{
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: .5px solid #444;
+  margin-bottom: 15px;
+}
+.hot .content {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between; 
+}
+.hot img{
+  display: block;
+}
+.hot .col-3{
+  width: 30.3333%; 
+  margin-top: 15px;
+}
+@media (max-width:512px){
+  .hot .col-3{
+     width: 45%;    
+  }
+}
+.hot .col-3 .info p{
+  color:#fff;  
+  margin-bottom: -5px;
+}
+
+.col-3{
+  width: 35%;
+  margin: 0 auto;
+  position: relative;
+ 
+}
+
+.sidebar{
+  width: 80%;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;   
+}
+ 
+.sidebar img{
+  display: block;   
+  width: 48%;
+  margin-right: 5px;
+  height: 100%;
+}
+.sidebar a{
+ display: flex;
+ font-size: 12px; 
+ align-items: center;
+  justify-content: center;
+}
+.sidebar ul {
+ margin-top: 20px;    
+  
+}
+.sidebar ul li{   
+ 
+  margin-top: 10px;
+}
+.sidebar .sub{
+  width: 48%;
+}
+.sidebar .sub p{
+  font-size: 15px;
+}
+.sidebar .sub span{
+  font-size:12px;
+}
+@media (max-width:768px){
+   .col-3 {
+    margin-top: 50px;
+    width: 100%;
+      
+  }  
+  .sidebar{
+    width: 60%;   
+  }
+}  
+.footer{
+  height: 80px;
+  margin-top: 100px;
+  background-color:#212121;
+  color:#fff;
+  line-height: 80px;
+  font-size: 12px;
+  margin-bottom: 0;
+}  
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width:512px){
+  .footer span{
+    display: none;
+  }
+}
+  
+  
+  
+  </style>
+</head>
+<body>
+  <div class="header"><a href="#"><h1>KUALA</h1><span>超越者</span></a></div>  
+  <div class="nav">
+    <ul>
+      <li><a href="#">Nike</a></li>
+      <li><a href="#">Adidas</a></li>
+      <li><a href="#">puma</a></li>
+      <li><a href="#">UA</a></li>
+      <li><a href="#">FILA</a></li>
+      <li><a href="#">Reebok</a></li>
+      <li><a href="#">hauwei</a></li>
+      <li><a href="#">nba</a></li>
+      <li><a href="#">news</a></li>
+      <li><a href="#">kuala</a></li>
+    </ul>
+    <input type="search">
+    <button><i class="fas fa-search"></i></button>
+  </div>
+  
+
+       <div class="top">      
+      
+      <div class="col-5">
+        <a href="#">
+           
+        <div class="title">
+          <p>活力不斷電 夏天連跑步都要很繽紛 / ASICS ‘Rise Bryte’ 輕炫系列跑鞋</p>
+          <span>WITNESS</span><span class="date">May 15,2019</span>
+        </div>
+        <img src="https://kenlu.net/wp-content/uploads/2019/05/20190515-ASICS-Rise-Bryte-34.jpg" alt="">
+       </a>
+      </div>
+      
+      <div class="col-5">
+           <a href="#">
+        <div class="title">
+          <p>活力不斷電 夏天連跑步都要很繽紛 / ASICS ‘Rise Bryte’ 輕炫系列跑鞋</p>
+          <span>WITNESS</span><span class="date">May 15,2019</span>         
+       </div>
+        <img src="https://kenlu.net/wp-content/uploads/2019/05/20190515-ASICS-Rise-Bryte-29.jpg" alt="">
+            </a>
+      </div>
+         
+      <div class="col-3">
+                   <a href="#">
+        <div class="title">
+          <p>活力不斷電 夏天連跑步都要很繽紛 / ASICS ‘Rise Bryte’ 輕炫系列跑鞋</p>            
+       </div>
+        <img src="https://kenlu.net/wp-content/uploads/2018/12/20181218-adidas-basketball-8.jpg" alt="">
+             </a>
+         </div>
+         
+           <div class="col-3">
+                   <a href="#">
+        <div class="title">
+          <p>活力不斷電 夏天連跑步都要很繽紛 / ASICS ‘Rise Bryte’ 輕炫系列跑鞋</p>            
+       </div>
+        <img src="https://kenlu.net/wp-content/uploads/2018/12/20181218-adidas-basketball-8.jpg" alt="">
+             </a>
+         </div>
+         
+               <div class="col-3">
+                   <a href="#">
+        <div class="title">
+          <p>活力不斷電 夏天連跑步都要很繽紛 / ASICS ‘Rise Bryte’ 輕炫系列跑鞋</p>            
+       </div>
+        <img src="https://kenlu.net/wp-content/uploads/2018/12/20181218-adidas-basketball-8.jpg" alt="">
+             </a>
+         </div>
+         
+    </div>
+
+  
+ 
+  
+  
+<div class="content">
+  <div class="container">
+   <div class="row">
+    <div class="col-7">
+  <div class="news">
+      <img src="https://kenlu.net/wp-content/uploads/2017/04/20190429-ADIDAS-MARVEL-5.jpg" alt="">
+       <h2 class="title">Marvel x adidas ‘Heroes Among Us’ </h2>
+       <span class="author">By -Witness</span><span class="date">Last updated Apr 30,2019</span>
+      
+       <div class="share">
+         <span class="sha"><i class="fa fa-share"></i>Share</span>
+          <a href="#" class="face"><i class="fa fa-search"></i>Facebook</a>
+          <a href="#" class="face"><i class="fa fa-search"></i>Whatsapp</a>
+       </div>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia iure reiciendis molestias cumque, nihil impedit, mollitia placeat numquam vero vitae dignissimos magni in provident. Doloremque facere, hic. Magni, exercitationem, ea.</p>
+      <img src="https://kenlu.net/wp-content/uploads/2019/04/20190424-adidas-Marvel-pack-1-750x430.jpg" alt="">
+      <h2 class="subtitle">adidas DAME 5 ‘Black Panther’</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nobis nam, vitae, consequatur sit sed fuga, aperiam et molestias blanditiis deserunt saepe soluta ad repudiandae! Quia dignissimos eveniet quo vitae consequatur dicta hic id corporis quos quasi distinctio illum dolore error earum perspiciatis labore ex excepturi, dolor eligendi eaque repellendus.</p>
+      <img src="https://kenlu.net/wp-content/uploads/2017/04/20190429-ADIDAS-MARVEL-1-750x430.jpg" alt="">
+      <h2 class="subtitle">adidas Marquee BOOST ‘Thor’</h2>
+        鞋款特色
+       <ol>
+         <li>全新 Lightstrike 中底科技</li>
+         <li>Primeknit 針織鞋身</li>
+         <li>無鞋帶概念</li>
+       </ol>
+     <div class="pic4">
+     <img src="https://kenlu.net/wp-content/uploads/2019/05/20190515-ASICS-Rise-Bryte-7.jpg" alt="">
+     <img src="https://kenlu.net/wp-content/uploads/2019/05/20190515-ASICS-Rise-Bryte-5.jpg" alt="">
+       <img src="https://kenlu.net/wp-content/uploads/2019/05/20190515-ASICS-Rise-Bryte-18-750x430.jpg" alt="">
+       <img src="https://kenlu.net/wp-content/uploads/2019/04/20190424-adidas-Marvel-pack-28-1280x854.jpg" alt="">
+    </div>
+
+    <div class="picfrom">
+      圖片來源 : 
+      <a class="unline" href="#">B/R kicks</a>/
+       <a class="unline" href="#">Getty Images</a>/
+       <a class="unline" href="#">P.J. Tucker</a>
+    </div>
+    <div class="tags">
+      <span><i class="fa fa-tag"></i></span>
+      <a class="tag" href="#">basketball</a>
+       <a class="tag" href="#">baseball</a>
+       <a  class="tag" href="#">shoes</a>
+    </div>         
+   </div>   
+                          
+   <div class="intro">
+     <div class="icon"><i class="fas fa-quote-right"></i></div>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores natus fuga officiis voluptate id repudiandae hic sunt vero assumenda atque, temporibus possimus esse quisquam! Sunt adipisci quam veritatis sequi at.</p>
+   </div>
+      
+           
+  <div class="morenews">
+    <div class="container">
+    
+      <h2>Asics <span style="color:#1E73BE;">></span></h2>
+      
+      <div class="content">
+        <div class="card">         
+          <img src="https://kenlu.net/wp-content/uploads/2019/05/asic-GEL-KAYANO-5-360.jpg" alt="">
+          <span class="cls">新聞</span>
+          <div class="info">
+            <a href="#"><h3>新聞分享/拍照打卡有機會抽中它</h3></a>
+            <span class="author">WITNESS</span><span class="date">May 23, 2019</span>
+            <p>GEL-KAYANO 5 問世 20 周年紀念之際讓 ASICS 把它以 OG 型態回歸，加上與 Vivienne Westwood、HBX、GmbH 等單位的聯名企劃讓這款當年的跑鞋變成街頭焦點。另一方面 GEL-KAYANO</p>
+          </div>
+        </div>
+        
+                <div class="card">         
+          <img src="https://kenlu.net/wp-content/uploads/2019/05/asic-GEL-KAYANO-5-360.jpg" alt="">
+          <span class="cls">新聞</span>
+          <div class="info">
+            <a href="#"><h3>新聞分享/拍照打卡有機會抽中它</h3></a>
+            <span class="author">WITNESS</span><span class="date">May 23, 2019</span>
+            <p>GEL-KAYANO 5 問世 20 周年紀念之際讓 ASICS 把它以 OG 型態回歸，加上與 Vivienne Westwood、HBX、GmbH 等單位的聯名企劃讓這款當年的跑鞋變成街頭焦點。另一方面 GEL-KAYANO</p>
+          </div>
+        </div>
+        
+                <div class="card">         
+          <img src="https://kenlu.net/wp-content/uploads/2019/05/asic-GEL-KAYANO-5-360.jpg" alt="">
+          <span class="cls">新聞</span>
+          <div class="info">
+            <a href="#"><h3>新聞分享/拍照打卡有機會抽中它</h3></a>
+            <span class="author">WITNESS</span><span class="date">May 23, 2019</span>
+            <p>GEL-KAYANO 5 問世 20 周年紀念之際讓 ASICS 把它以 OG 型態回歸，加上與 Vivienne Westwood、HBX、GmbH 等單位的聯名企劃讓這款當年的跑鞋變成街頭焦點。另一方面 GEL-KAYANO</p>
+          </div>
+        </div>
+        
+                <div class="card">         
+          <img src="https://kenlu.net/wp-content/uploads/2019/05/asic-GEL-KAYANO-5-360.jpg" alt="">
+          <span class="cls">新聞</span>
+          <div class="info">
+            <a href="#"><h3>新聞分享/拍照打卡有機會抽中它</h3></a>
+            <span class="author">WITNESS</span><span class="date">May 23, 2019</span>
+            <p>GEL-KAYANO 5 問世 20 周年紀念之際讓 ASICS 把它以 OG 型態回歸，加上與 Vivienne Westwood、HBX、GmbH 等單位的聯名企劃讓這款當年的跑鞋變成街頭焦點。另一方面 GEL-KAYANO</p>
+          </div>
+        </div>
+        
+      </div>        
+    </div>
+  </div>
+     
+      
+    <div class="hot">
+    <div class="container">   
+      <h2>你可能感興趣 <span style="color:#1E73BE;"> ></span></h2>
+      </div>
+      
+      <div class="content">
+        <div class="col-3">
+           <a href="#">
+          <img src="https://kenlu.net/wp-content/uploads/2019/01/201812-Tmac-Review-20-300x150.jpg" alt="">
+           <div class="info">
+             <p>官方新聞 / ASICS HYPERGEL-YU 不只是雙運動鞋</p>
+             <span class="date">2019-05-08</span>
+          </div>
+             </a>
+        </div>
+        
+                <div class="col-3">
+          <img src="https://kenlu.net/wp-content/uploads/2019/01/201812-Tmac-Review-20-300x150.jpg" alt="">
+           <div class="info">
+             <p>官方新聞 / ASICS HYPERGEL-YU 不只是雙運動鞋</p>
+             <span class="date">2019-05-08</span>
+          </div>
+        </div>
+        
+                <div class="col-3">
+          <img src="https://kenlu.net/wp-content/uploads/2019/01/201812-Tmac-Review-20-300x150.jpg" alt="">
+           <div class="info">
+             <p>官方新聞 / ASICS HYPERGEL-YU 不只是雙運動鞋</p>
+             <span class="date">2019-05-08</span>
+          </div>
+        </div>
+        
+                <div class="col-3">
+          <img src="https://kenlu.net/wp-content/uploads/2019/01/201812-Tmac-Review-20-300x150.jpg" alt="">
+           <div class="info">
+             <p>官方新聞 / ASICS HYPERGEL-YU 不只是雙運動鞋</p>
+             <span class="date">2019-05-08</span>
+          </div>
+        </div>
+        
+        
+                <div class="col-3">
+          <img src="https://kenlu.net/wp-content/uploads/2019/01/201812-Tmac-Review-20-300x150.jpg" alt="">
+           <div class="info">
+             <p>官方新聞 / ASICS HYPERGEL-YU 不只是雙運動鞋</p>
+             <span class="date">2019-05-08</span>
+          </div>
+        </div>
+        
+                <div class="col-3">
+          <img src="https://kenlu.net/wp-content/uploads/2019/01/201812-Tmac-Review-20-300x150.jpg" alt="">
+           <div class="info">
+             <p>官方新聞 / ASICS HYPERGEL-YU 不只是雙運動鞋</p>
+             <span class="date">2019-05-08</span>
+          </div>
+        </div>
+      
+      </div>
+      
+      
+          
+      </div>
+      
+     </div>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-3">
+      <div class="sidebar">
+        <h3>觀看更多</h3>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="https://keedan.com/track/files/2019/05/onepiece23_fixw_640_hq-600x338.jpg" alt="">
+              <div class="sub">
+              <p>這是標題</p>
+               <span>這是內容內容內...</span>
+              </div>
+            </a>
+          </li>
+        
+                    <li>
+            <a href="#">
+              <img src="https://keedan.com/track/files/2019/05/onepiece23_fixw_640_hq-600x338.jpg" alt="">
+              <div class="sub">
+                   <p>這是標題</p>
+            <span>這是內容內容內...</span>            
+                
+                 
+              </div>
+            
+            </a>
+          </li>
+          
+                    <li>
+            <a href="#">
+              <img src="https://keedan.com/track/files/2019/05/onepiece23_fixw_640_hq-600x338.jpg" alt="">
+              <div class="sub">
+              <p>這是標題</p>
+              <span>這是內容內容內...</span>
+              </div>
+            </a>
+          </li>
+          
+                    <li>
+            <a href="#">
+              <img src="https://keedan.com/track/files/2019/05/onepiece23_fixw_640_hq-600x338.jpg" alt="">
+              <div class="sub">
+              <p>這是標題</p>
+              <span>這是內容內容內...</span>
+              </div>
+            </a>
+          </li>
+ 
+          
+                    <li>
+            <a href="#">
+              <img src="https://keedan.com/track/files/2019/05/onepiece23_fixw_640_hq-600x338.jpg" alt="">
+              <div class="sub">
+              <p>這是標題</p>
+              <span>這是內容內容內...</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    </div> 
+  </div>  
+  
+  
+  
+  <div class="footer">
+    <div class="container">
+      © 2019 - KUALA.net. All Rights Reserved.
+      <span>Website Design: BenH Inc.</span>
+    </div>
+  </div>
+</body>
+</html>
