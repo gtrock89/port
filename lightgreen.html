@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  
+  <title>business</title>
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  font-family:"Open Sans",sans-serif ;
+  color:#6e6e6e;
+  
+}
+ul li{
+  list-style:none;
+}
+a{
+  text-decoration: none;
+  color:#6e6e6e;
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+.container{
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%; 
+}
+.header{  
+ width: 100%;
+  
+}
+.top{  
+  height: 45px;
+  background-color:#198964;
+  color:#fff;
+  font-size: 12px;
+  padding-left: 25px;
+  padding-right: 25px;
+    line-height: 45px;
+  
+}
+.top .contact{
+  float: left;
+ padding-top: 15px;
+ line-height: 1.5;
+}
+.top .contact i{
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.top .social{
+  float: right;
+}
+.top .social a{
+  color:#fff;
+  margin: 0 5px;
+  padding: 5px;
+}
+@media(max-width:768px){
+  .top{
+    height: auto;
+    text-align: center;
+    line-height: 30px;
+  }
+  .top .contact{
+    float: none;
+  
+  }
+  .top .social{
+    float: none;    
+  }
+}
+.bottom{
+  position: relative;
+  height: 100px; 
+  font-size: 15px;
+  padding-left: 40px;
+  padding-right: 40px; 
+ 
+  
+}
+.bottom .logo{ 
+ float: left;
+ 
+}
+.bottom .logo h1{
+  display: inline-block;
+  line-height: 100px;
+  position: relative;
+  color:#323232;
+}
+.bottom .logo h1:before{
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height:40px;
+  background-color:#198964;
+  position: relative;
+  top: 10px;
+  left: 2px;
+  transform:rotate(45deg);
+  margin-right: 25px;
+}
+.bottom .logo h1:after{
+  content: 'B';
+  position: absolute;
+  color:#fff;
+  top: 0px;
+  left: 12px;
+}
+.bottom .nav{
+  float: right; 
+  padding:15px 0;
+    transition:.4s;
+  font-size: 12px;
+}
+.bottom .nav li{
+  display: inline-block;
+  float: left;
+  line-height: 50px;
+  
+}
+.bottom .nav li a{
+  display: block;
+  padding:8px;
+ 
+  text-transform:uppercase;
+}
+.bottom .nav li a:hover{
+  color:#198964;
+}
+@media (max-width:900px){
+  .bottom{
+    height: auto;  
+    z-index: 99;
+  }
+  .bottom .logo{   
+    font-size: 10px;
+  }
+  .bottom .logo h1:after{
+    left: 15px;
+    top: -2px;
+  }
+  .bottom .nav{
+    float: none; 
+    line-height:50px;   
+    position: absolute;
+    top: 100px;
+    left: -1px;
+    right: 0;
+    background-color:#198964;   
+   height: 0;
+    overflow: hidden;
+    padding: 0;
+   
+  }
+  .opnav{
+    height:auto !important;
+    
+  }
+  .bottom .nav li{
+    display: block;
+    float: none;
+    line-height:1.5;
+    border-bottom: .5px solid #fff;    
+    
+  }
+  .bottom .nav li a{
+    padding-left: 35px;
+    color:#fff;
+   
+  }
+   .bottom .nav li a:hover{
+     color:#fff;
+   }
+  .bottom .navtoggle{
+    display: block;
+    width: 40px;
+    height: 35px;
+    float: right;
+    margin-top: 30px;
+    padding: 8px;
+    cursor:pointer;
+  }
+  .bottom .navtoggle span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:#198964; 
+    position: relative;
+  }
+  .bottom .navtoggle span:before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #198964;
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+  .bottom .navtoggle span:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #198964;
+    position: absolute;
+    top: 16px;
+    left: 0;
+  }
+}
+.banner{
+  clear:both;
+  background: url('https://images.unsplash.com/photo-1559163499-413811fb2344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  height: 400px;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size:cover;
+  text-align: center;
+  font-size: 22px;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+  position: relative;
+  overflow: hidden;
+  
+}
+@media (max-width:768px){
+  .banner{
+    height: 300px;
+    font-size: 18px;
+  }
+}
+@media (max-width:512px){
+  .banner{
+    height: 250px;
+  }
+}
+.banner:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:rgba(0,0,0,.3); 
+}
+.banner .info{
+  z-index: 1;
+}
+.banner button{
+  margin-top: 5px;
+  background-color:#198964;
+  color:#fff;
+  border: 1px solid #198964;
+  padding: 8px 15px;
+  cursor:pointer;
+  border-radius:3px;
+}
+.banner button:hover{
+  background-color:transparent;
+ 
+}
+.banner:hover .prev{
+  left: 0;
+}
+.banner:hover .next{
+  right: 0;
+}
+.next,.prev{
+  display: inline-block; 
+  font-size: 40px;
+  padding:15px;
+  position: absolute;
+  cursor:pointer;
+  top: 50%;
+   transform:translateY(-50%);
+  transition:.5s;
+}
+.prev{
+  left: -50px;
+ 
+}
+.next{
+  right: -50px;
+}
+
+.service{
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  line-height: 1.5;
+  clear:both;
+  font-size: 13px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.alltitle h3{
+  font-size: 28px;
+  color:#333;
+}
+.alltitle span {
+  display: inline-block;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+.alltitle span i{
+  display: inline-block;
+  padding:0 15px; 
+  color:#198964;
+}
+.alltitle span:before{
+ content: '';
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color:rgba(0,0,0,.2);
+   
+}
+.alltitle span:after{
+ content: '';
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color:rgba(0,0,0,.2);
+}
+.rowwrap{ 
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.service .icon{
+  width: 30%;
+  margin-top: 35px;
+}
+.service .icon:hover .pic{
+  background-color:#198964;
+  color:#fff;
+}
+ 
+@media (max-width:768px){
+  .service .icon{
+    width: 48%;
+  }
+}
+@media (max-width:512px){
+  .service .icon{
+    width: 95%;
+  }
+}
+.icon .pic{
+  display: inline-block;
+  font-size: 20px;
+  border: .5px solid #198964;
+  width: 45px;
+  height: 45px;
+  color:#198964;
+  transform:rotate(45deg);
+  padding: 7px;
+  transition:.5s;
+}
+.icon i{
+  transform:rotate(-45deg);
+} 
+.service .icon .title{
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.service .icon p{
+   margin-bottom: 10px;
+}
+.service .icon a{
+  color:#198964;
+}
+
+.impressed{
+  clear:both;
+  background:url('https://images.unsplash.com/photo-1505410603994-c3ac6269711f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 300px;
+  color:#fff; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.impressed:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0,0,0,.4); 
+}
+.impressed .content{
+  max-width:600px;
+  padding: 20px;
+  position: relative;
+  
+}
+.impressed .content h2{
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.impressed .content p{
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.impressed button{
+  background-color:transparent;
+  border: .5px solid #198964;
+  color:#fff;
+  padding:10px 35px;
+  border-radius:3px ;
+  cursor:pointer;
+  margin-right: 13px;
+  transition:.6s;
+}
+.impressed button.active{
+  background-color: #198964;
+}
+.impressed button.active:hover{
+  background-color:transparent;
+}
+.impressed button:hover{
+  background-color: #198964;
+}
+.ourteam{
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  line-height: 1.5;
+  clear:both;
+  font-size: 13px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+}
+.card{
+  width: 22%;
+  margin-top: 30px;
+}
+@media (max-width:636px){
+  .card{
+    width: 48%;
+  }
+}
+.name{
+  font-size: 16px;
+  color:#198964;
+  margin-top: 10px;
+}
+.card span{
+  font-size: 12px;
+  display: block;
+}
+.email{
+  color:#1BBC9B;
+  font-size: 12px;
+}
+.card .imgwrap{
+  position: relative;  
+}
+.card:hover .iconwrap{
+  bottom: 10px;
+}
+.imgwrap{
+  overflow: hidden; 
+}
+ 
+.imgwrap .pic{
+  width: 25px;
+  height: 25px;
+  font-size: 12px; 
+  background-color: #fff;
+  border: 1px solid #fff;
+  cursor:pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.imgwrap .pic:hover{
+  background-color:#1BBC9B;
+  border: 1px solid #1BBC9B;
+  color:#fff;
+}
+.imgwrap .pic i{
+  font-size: 14px;
+ position: absolute;
+  top: 5px;
+  left: 6px;
+}
+.iconwrap{  
+  position: absolute;
+  width: 100%;
+  bottom:-80px;
+  left: 0;  
+  transition:.6s;
+
+  display: flex;
+ justify-content: center;
+} 
+@media (max-width:768px){
+  .imgwrap .pic{
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
+
+.client{
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  line-height: 1.5;
+  clear:both;
+  font-size: 13px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ background-color: #EDEDED;
+}
+.cl-wrap{
+ 
+ margin-top: 25px;
+ display: flex;
+  justify-content: center;
+}
+.cl-item p{
+ 
+font-size: 12px;
+  max-width:450px;
+}
+.cl-item img{
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin-top: 20px;
+}
+.cl-item .email{
+  color:#969696;
+}
+
+
+.recent{
+  max-width:1024px;
+  padding-left: 25px;
+  padding-right: 25px; 
+  line-height: 1.5;
+  clear:both;
+  font-size: 13px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center; 
+   margin: 0 auto;
+}
+.wrap{
+  margin-top: 20px;  
+  overflow: hidden;
+  display: flex;
+  justify-content: center; 
+}
+.recent .left{
+  width: 34%;   
+  margin-right: 3%;
+} 
+.post{
+  position: relative; 
+}
+.post .text-wrap{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color:#fff; 
+  padding: 10px;
+}
+.post .title{
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+}
+.post .date{
+  font-size: 10px;
+}
+.recent .right{
+  width: 63%;  
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  
+}
+.recent .right .post{
+  float: left;
+  width: 48%;  
+  margin-bottom: 4%;
+ 
+}
+.recent .right .post:nth-child(3){
+  margin-bottom: 0;
+}
+.recent .right .post:nth-child(4){
+  margin-bottom: 0;
+}
+.recent .right .post img{
+  min-height: 100%;
+}
+@media (max-width:512px){
+  .recent{
+   
+  }
+  .wrap{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .recent .left{
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .recent .right  {
+    width: 90%;
+  
+  }
+  .recent .right .post{
+    width: 100%; 
+   margin-bottom: 20px;
+  }
+  .recent .right .post:nth-child(3){
+  margin-bottom: 20px;
+}
+.recent .right .post:nth-child(4){
+  margin-bottom: 0;
+}
+}
+ 
+
+.subscribe{
+ width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  line-height: 1.5;
+  clear:both;
+  font-size: 13px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+.frm{
+
+  margin-top: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.frm input{
+  height: 35px;
+  
+}
+.frm [type="email"]{
+  width: 40%;
+  font-size: 12px;
+  outline:none;
+}
+ .frm [type="submit"]{ 
+   width: 150px;
+   background-color: #1BBC9B;
+   border: 1px solid #1BBC9B;
+   color:#fff;
+   cursor:pointer; 
+}
+@media (max-width:512px){
+  .frm [type="submit"]{ 
+    width: 80px;
+  }
+  .frm [type="email"]{
+   width: 80%;
+  }
+}
+
+.footer{
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;   
+  line-height: 1.5;
+  clear:both;
+  font-size: 13px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #262626;
+}
+.footer img{
+  width: 80px;
+}
+.footer .col{
+  width: 23%;
+  
+  margin: 1%;
+}
+@media (max-width:768px){
+  .footer .wrap{
+    flex-direction: column;
+  
+    align-items: center;
+  }
+  .footer .col{
+    width: 80%
+ 
+  }
+}
+.footitle{
+ font-size: 15px;
+  color:#1DA085;
+  margin-bottom: 15px;
+}
+.about{
+ 
+}
+.about .social{
+    color:#BABABA;
+  margin-top: 15px;
+}
+.about .social span{
+  margin: 10px;
+  display: inline-block;
+}
+.about .social i{
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  left: 6px;
+ 
+}
+.about .social span:before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #BABABA;;
+  background-color:transparent;
+  position: absolute;
+  transform:rotate(45deg);
+}
+.advanced{
+  
+}
+.advanced .info{
+  display: flex;
+  align-items: center;
+  
+ 
+  margin-bottom: 15px;
+}
+.advanced .info .des{
+  margin-left: 10px;
+}
+.advanced img{
+ 
+}
+
+.recentpost{
+  
+}
+.recentpost ul{
+  
+}
+.recentpost ul li{
+  margin-bottom: 10px;
+}
+.gallery{
+ 
+}
+.gallery img{
+  width: 31%;
+  margin: 1%;
+  float: left;
+  
+}
+
+.copyright{
+  background-color: #303133; 
+  height: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 50px;
+  font-size: 12px;
+}
+ 
+.gotop{
+  width: 30px;
+  height: 30px;
+  background-color:#198964;
+  transform:rotate(45deg);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  cursor:pointer;
+  padding-top: 5px;
+  padding-left: 6px;
+  display: none;
+}
+.gotop i{
+  color:#fff;
+  transform:rotate(-45deg);
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="gotop">
+  <i class="fa fa-chevron-up"></i> 
+  </div>
+<div class="header">
+
+  <div class="top">
+      <div class="container">
+    <div class="contact">
+       <i class="fa fa-search"></i>New Yorks
+      <i class="fa fa-phone"></i>+1-123-456-7890
+      <i class="fa fa-envelope"></i>wpsupport@prodesgns.com
+    </div>
+    
+    <div class="social">
+      <a href="#"><i class="fa fa-facebook"></i></a>/
+       <a href="#"><i class="fa fa-twitter"></i></a>/
+      <a href="#"><i class="fa fa-google-plus"></i></a>/
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+         </div>
+  </div>
+  
+  
+  <div class="bottom">
+   <div class="container">
+  <div class="logo"><a href="#"><h1>Business Point</h1></a></div>
+   <div class="navtoggle"><span></span></div>
+     <ul class="nav">
+    <li><a href="#">home</a></li>
+    <li><a href="#">ourteam</a></li>
+    <li><a href="#">portfolio</a></li>
+    <li><a href="#">testimonals</a></li>
+    <li><a href="#">blog</a></li>
+    <li><a href="#">contact</a></li>
+    <li><a href="#">buyour</a></li>
+  </ul>
+  </div>
+ </div>
+</div>
+  
+  
+  <div class="banner">
+    <div class="info">
+    <h2>Responsive Busniss web</h2>
+    <p>Its users optimal viewing experience ,blog and all web</p>
+    <button>Read more</button>
+       <span class="next"><i class="fa fa-angle-right"></i></span>
+    <span class="prev"><i class="fa fa-angle-left"></i></span>
+    </div>   
+  </div>  
+  
+  <div class="service">
+    <div class="container">
+    
+    <div class="alltitle">
+    <h3>Our Services</h3>
+    <span><i class="fa fa-code"></i></span>
+    <p>We are creative design agency focused on full implementation services of all sizes</p>
+     </div>
+      
+      
+      <div class="rowwrap">
+      
+      <div class="icon">
+        <div class="pic"><i class="fa fa-comment"></i></div>
+         <h5 class="title">24/7 Support</h5>
+         <p>Our dedicated support team provides 24/7 support through emails, skype and online calls...</p>
+         <a href="#">Read More >></a>
+      </div>
+        
+         <div class="icon">
+        <div class="pic"><i class="fa fa-wifi"></i></div>
+         <h5 class="title">24/7 Support</h5>
+         <p>Our dedicated support team provides 24/7 support through emails, skype and online calls...</p>
+         <a href="#">Read More >></a>
+      </div>
+        
+         <div class="icon">
+        <div class="pic"><i class="fa fa-codepen"></i></div>
+         <h5 class="title">24/7 Support</h5>
+         <p>Our dedicated support team provides 24/7 support through emails, skype and online calls...</p>
+         <a href="#">Read More >></a>
+      </div>
+        
+         <div class="icon">
+        <div class="pic"><i class="fa fa-wrench"></i></div>
+         <h5 class="title">24/7 Support</h5>
+         <p>Our dedicated support team provides 24/7 support through emails, skype and online calls...</p>
+         <a href="#">Read More >></a>
+      </div>
+        
+         <div class="icon">
+        <div class="pic"><i class="fa fa-copy"></i></div>
+         <h5 class="title">24/7 Support</h5>
+         <p>Our dedicated support team provides 24/7 support through emails, skype and online calls...</p>
+         <a href="#">Read More >></a>
+      </div>
+        
+         <div class="icon">
+        <div class="pic"><i class="fa fa-facebook"></i></div>
+         <h5 class="title">24/7 Support</h5>
+         <p>Our dedicated support team provides 24/7 support through emails, skype and online calls...</p>
+         <a href="#">Read More >></a>
+       </div>
+                
+    </div>
+   </div>
+  </div>
+   
+  
+  <div class="impressed">
+    <div class="content">
+    <h2>Are You Impressed With Us?</h2>
+    <p>Business Point is responsive multipurpose business theme. It can be used for business, corporate, portfolio, digital agency, landing page, blog, entertainment and all informative websites. Making your website your own is easier than ever before with Business Point.</p>
+    <button class="more active" >Learn More</button>
+    <button class="buy">Buy Pro</button>
+    </div>
+    </div>  
+   
+  
+   
+    
+     
+   <div class="ourteam">
+    <div class="container">    
+   
+      <div class="alltitle">
+    <h3>Our Team</h3>
+    <span><i class="fa fa-user"></i></span>
+    <p>We are proud of our experienced and dedicated team. These are faces for our success and popularity</p>
+     </div>
+      
+      
+      <div class="rowwrap">      
+        
+        <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1508883006770-5e013e5e6f73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+        
+                <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1521315967332-b5c63ee260d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+        
+                <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+        
+                <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1491440305722-061438e1cdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+        
+                <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1557452876-40bc74311155?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1050&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+        
+                <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1556815798-86e1fc06afc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+        
+                <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1549917465-8120e25861d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+        
+           <div class="card">
+          <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1513597607252-a125b383749a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjU1MzA3fQ&auto=format&fit=crop&w=1050&q=80" alt="">
+           <div class="icon">
+             <div class="iconwrap">
+             <div class="pic"><i class="fa fa-facebook"></i></div>
+              <div class="pic"><i class="fa fa-twitter"></i></div>
+              <div class="pic"><i class="fa fa-github"></i></div>
+             </div>
+             </div> 
+          </div> 
+          <p class="name">Kathy Jones</p>
+           <span>Graphic Designer</span>
+           <a href="#">kathy@example.com</a>
+        </div>
+     
+      </div>
+      
+      
+     </div>
+      </div> 
+    
+  
+    <div class="client">
+    <div class="container">
+    
+    <div class="alltitle">
+    <h3>What Clients Say</h3>
+    <span><i class="fa fa-comment"></i></span>
+     </div>
+         
+      <div class="cl-wrap">
+       
+        <div class="cl-item">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam labore harum doloribus, praesentium est et ab amet dolor fugit optio rem laudantium molestias sit repudiandae maxime voluptas eius esse! Velit.</p>
+        <img src="https://www.prodesigns.com/wordpress-themes/demo/business-point/wp-content/uploads/sites/26/2017/09/pexels-photo-206559-370x428.jpeg" alt="">
+           <p class="name">Kathy Jones</p>           
+           <a href="#" class="email">kathy@example.com</a>
+        </div>
+       
+      
+      </div>
+      
+      </div>
+      </div>  
+  
+   <div class="recent">
+    <div class="container">
+    
+    <div class="alltitle">
+    <h3>Recent Posts</h3>
+    <span><i class="fa fa-folder-open"></i></span>
+     <p>Be first to know what all the Business Point is about and follow our news feed for latest updates</p>
+      </div>
+  
+      
+       <div class="wrap">
+        <div class="left">         
+          <div class="post">
+            <img src="https://www.prodesigns.com/wordpress-themes/demo/business-point/wp-content/uploads/sites/26/2017/03/golfers-660596_1280-370x500.jpg" alt="">
+            <div class="text-wrap">
+            <p class="title">A golfer ready for hitting a tee shot</p>
+            <span class="date">2019 8/12</span>
+            </div>
+          </div>
+        
+        </div>
+        
+        <div class="right">            
+            <div class="post">
+            <img src="https://www.prodesigns.com/wordpress-themes/demo/business-point/wp-content/uploads/sites/26/2017/03/auto-2379757_1280-370x235.jpg" alt="">
+            <div class="text-wrap">
+            <p class="title">A golfer ready for hitting a tee shot</p>
+            <span class="date">2019 8/12</span>
+            </div>
+          </div>
+          
+           <div class="post">
+            <img src="https://images.unsplash.com/photo-1553531889-3836a7ee6d3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" alt="">
+            <div class="text-wrap">
+            <p class="title">A golfer ready for hitting a tee shot</p>
+            <span class="date">2019 8/12</span>
+            </div>
+          </div>
+          
+           <div class="post">
+            <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+            <div class="text-wrap">
+            <p class="title">A golfer ready for hitting a tee shot</p>
+            <span class="date">2019 8/12</span>
+            </div>
+          </div>
+          
+           <div class="post">
+            <img src="https://images.unsplash.com/photo-1531303814030-5636aa5d6452?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+            <div class="text-wrap">
+            <p class="title">A golfer ready for hitting a tee shot</p>
+            <span class="date">2019 8/12</span>
+            </div>         
+          </div>
+          
+        </div>
+    </div>
+      
+     </div>
+  </div>
+    
+  
+  <div class="subscribe">
+    <div class="container">   
+    <div class="alltitle">
+    <h3>Subscribe Us To Get Updated</h3>
+    <span><i class="fa fa-envelope"></i></span>
+     <p>Early subscribers gets perks including 10% off first purchase</p>                
+  </div>
+      
+      <form class="frm"  method="post">
+         <input type="email" name="email" placeholder="Your email address" required>
+        <input type="submit" value="Sign up" name="submit">
+      </form>
+  
+  </div>  
+  </div>  
+  
+  
+<div class="footer">
+  <div class="container">
+    <div class="wrap">
+      <div class="about col">
+        <h4 class="footitle">About Us</h4>
+        <p>Business Point is the responsive multipurpose business theme. It can be used for business, portfolio, digital agency, blog and all informative websites.</p>
+         <div class="social">
+          <span> <i class="fa fa-pinterest"></i> </span>
+           <span> <i class="fa fa-twitter"></i>  </span>
+           <span> <i class="fa fa-github"></i> </span> 
+           <span> <i class="fa fa-instagram"></i>  </span>
+         </div>
+      </div>
+      
+         <div class="advanced col">
+           <h4 class="footitle">Advenced Recent Posts</h4>
+           <div class="info">
+           <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+            <div class="des">
+            <p>A golfer ready for hitting a tee shot</p>
+            <span class="date">March 16, 2017</span>
+            </div>                                   
+             </div>
+            
+           <div class="info">
+           <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+            <div class="des">
+            <p>A golfer ready for hitting a tee shot</p>
+            <span class="date">March 16, 2017</span>
+            </div>                                   
+             </div>
+      </div>
+      
+      
+         <div class="recentpost col">
+             <h4 class="footitle">Recent Posts</h4>
+               <ul>
+                 <li>A golfer ready for hitting a tee shot</li>
+                 <li>Business Point looks amazing in iPad</li>
+                 <li>Traveling vintage car is my hobby</li>
+                 <li>Contract signed for new web design</li>
+                 <li>Mobile apps developer’s life</li>
+               </ul>
+         </div>
+      
+      
+         <div class="gallery col">
+            <h4 class="footitle">Gallery</h4>
+           <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+           <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+             <img src="https://images.unsplash.com/photo-1531303814030-5636aa5d6452?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+           <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+           <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+           
+         </div>
+    </div>
+    
+  </div>
+</div>  
+  
+  <div class="copyright">
+    <div class="container">
+    <div class="rowwrap">
+      <p>Copyright © All rights reserved</p>
+    <p>Business Point by ProDesigns</p>
+    </div>
+      </div>
+  </div>
+
+
+  <script>
+    $(function(){
+  $('.navtoggle').click(function(){
+     $('.nav').toggleClass('opnav');
+  })
+  
+  $('.gotop').click(function(event){
+   event.preventDefault();
+  $('html,body').animate({
+    scrollTop:0
+  },700);
+  });
+  
+      $(window).scroll(function() {
+        if ( $(this).scrollTop() > 400){
+            $('.gotop').fadeIn();
+        } else {
+            $('.gotop').fadeOut();
+        }
+    });
+
+ 
+})
+  </script>
+</body>
+</html>
