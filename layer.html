@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="layer.js"></script>
+  <title>layer</title>
+
+  <style>
+    
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a{
+  text-decoration: none;
+  color:#333;
+  
+}
+img{
+  display: block;
+  max-width:100%;
+  height: 300px;
+}
+body{
+  font-family:"微軟正黑體";
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.contentwrap{
+  position: relative;
+  transition:all 1s;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1;
+}
+.container{
+  max-width:1024px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.header{
+  height: 130px; 
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1{
+  background:url('https://images2.imgbox.com/73/0f/9UXyBDz2_o.png') no-repeat;
+  background-position: center center;
+  text-indent:-9999px;
+  height: 100px; 
+  float: left;
+  width: 200px;
+}
+.header .flr{
+   float: right;       
+   font-size: 15px; 
+  font-weight:bold;
+}
+@media (max-width:768px){
+  .header .flr{
+    display: none;
+  }
+}
+.header .flr .active{
+  color:#212060;
+}
+.header .flr-left{
+  float: left; 
+}
+.header .flr-left a{
+  margin-right: 15px;
+}
+.flr .lang{
+  float: right;  
+  margin-left: 5px;
+}
+.flr .lang  a{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navtog{
+  width: 50px;
+  height: 40px;  
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  z-index: 11;
+
+  cursor:pointer;
+  display: none;  
+ 
+}
+.navtog .span1{
+  display:block;
+  width: 70%;
+  height: 3px;
+  background-color:#10498F; 
+  position: relative;
+  transition:.5s;
+  
+}
+.navtog .span2{
+  display:block;   
+  width: 70%;
+  height: 3px;
+  background-color:#10498F; 
+  transition:.5s;
+  position: relative;
+}
+.navtog .span3{
+  display:block;   
+  width: 70%;
+  height: 3px;
+  background-color:#10498F; 
+  position: relative;
+ transition:.5s;
+}
+@media(max-width:768px){
+  .navtog{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .navtog span{
+   
+  }
+}
+.bodyleft{
+  left: -265px;
+}
+.rot1{
+  transform:rotate(45deg);
+  top: 10px;
+}
+.rot2{
+  transform:rotate(-45deg);
+  top: -10px;
+} 
+
+.nav{
+  height: 50px;
+  background-color:#212060;
+  color:#fff; 
+ display: flex;
+ justify-content: center;
+}
+    @media (max-width:768px){
+      .nav{
+        display: none;
+      }
+    }
+.nav .mainnav{ 
+  line-height: 50px;  
+}
+.nav .mainnav>li{
+  display: inline-block;
+  float: left;  
+  border-left: 1px solid #fff;
+  position: relative;
+}
+.nav .mainnav>li>a{
+  color:#fff;
+  display: block;
+  padding: 0 15px;
+
+}
+.nav .mainnav>li:last-child{
+   border-right: 1px solid #fff;
+}
+.nav .mainnav>li>a:hover{
+  background-color: #211FB5;
+  
+}
+
+.nav .subnav{
+  color:#fff;  
+  position: absolute;   
+  top:50px;
+  left: 0;
+  width: 300px; 
+  background-color:#211FB5;
+  z-index: 99;
+  display: none;
+}
+.nav .subnav li{
+  display: block;
+  float: none;
+ 
+
+}
+.nav .subnav li i{
+  margin-right: 5px;
+}
+.nav .subnav li a{
+ color:#fff;
+ display: block;
+ padding: 0 30px;
+}
+ .nav .subnav li a:hover{
+   background-color: #302EE9;
+ }
+ 
+.mobnav{
+  width: 265px;
+  height: 100vh; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color:#DDD;
+  z-index: 0;
+  transition:all 1s;
+  line-height:2;
+ 
+}
+.mobnav .lang{
+  background-color:#212060;
+  color:#D5D5D5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.mobnav .lang .active{
+  color:#fff;
+}
+.mobnav .lang span{
+  margin:0 25px;
+}
+.mobnav>ul{
+   
+}
+.mobnav>ul>li{
+  font-weight:bold;
+ line-height: 50px;
+   
+}
+.mobnav>ul>li>a{
+ 
+ display:inline-block;
+ 
+  padding-left: 15px;
+  width: 85%;
+}
+.mobnav li span{
+  width: 15%;
+   float: right; 
+  display:inline-block;
+  padding-left: 15px;
+  padding-right: 5px;
+  font-size: 20px;
+  cursor:pointer;
+  
+}
+.sub{
+  background-color: #EEE;
+ display: none;
+ 
+}
+.sub>li>a{
+  display: block;
+  line-height: 2.4;   
+  padding:0px 35px;
+  
+}
+
+
+
+
+.slide{ 
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.slide .items{
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 300px;
+  width: 100%;  
+}
+.slide .owl-dots{
+  position: absolute;
+  bottom: 0;
+  left: 50%; 
+  transform:translateX(-50%);
+}
+.slide .owl-dots button{
+  border: 1px solid #000;
+  background-color: #D8D8D8;
+  height: 10px;
+  width: 10px;
+  margin: 10px; 
+  border-radius:50% ;
+  border: 1px solid #D8D8D8;
+    outline:none;
+}
+.slide .owl-dots .active{
+  background-color:#212060;
+  border: 1px solid #212060;
+}
+    @media (max-width:512px){
+      .slide{
+        height: 200px;
+      }
+      .slide .items{
+        height: 200px;
+      }
+    }
+.bannerB{
+  width: 100%;
+  background-color:#B1B1B1;
+  text-align: center;
+  line-height:50px;
+  font-size: 25px;
+  color:#212060;
+  font-weight: bold;
+  letter-spacing: 6px;
+  position: relative;
+  z-index: 0;
+}
+.bannerB:after{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #B1B1B1;
+  position: absolute;
+  left: 48%;
+  bottom: -10px; 
+  transform:rotate(45deg);
+  z-index: -1;
+}
+
+.content{
+  padding: 50px 0;
+  background-color: #F0F0F0;  
+}
+.content .container{
+  width: 100%;
+ 
+}
+.content ul{    
+  overflow: hidden;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.content li {
+  width: 29%;  
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 3%;
+ 
+}
+.content li img{
+  display: block;
+  width:100%;  
+  height: 200px;
+  position: relative;
+}
+.content li img a{ 
+  display: block;
+}
+@media (max-width:768px){
+  .content li{
+    width: 45%;
+  }
+}
+@media (max-width:512px){
+  .content li{
+    width: 80%;
+    margin-top: 20px;
+  }
+  .content li img{
+   height: auto;
+  }
+} 
+.mask{ 
+  position: relative;
+}
+.mask:before{
+  content:'';
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.5);
+  z-index:1;
+  opacity: 0;
+  transition:.4s;
+  
+}
+.mask:after{
+  content:url('https://images2.imgbox.com/89/da/VTHfNw8O_o.png');
+  position: absolute;
+  top: 40%;
+  left: 40%;
+   opacity: 0;
+  transition:.4s;
+  z-index: 2;
+}
+li:hover .mask:before{
+  opacity: 1;
+}
+li:hover .mask:after{
+  opacity: 1;
+}
+.content li h3{
+  background-color:#838383;
+  color:#fff;
+  line-height:40px;
+   padding: 0 10px;
+  font-size: 17px;
+}
+.content li h3 i{
+  float: right;
+  line-height:40px;
+}
+.content li p{
+  margin-top: 10px;
+  line-height:25px;
+}
+
+.about{
+  height: 300px;
+  background-color:#666;
+  background:url('https://images.unsplash.com/photo-1556565681-306458ef93cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-position: center center;
+  -webkit-background-size:cover;
+  background-size:cover;
+  position: relative;
+  z-index: -1;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+}
+.about h3{
+  
+  font-size: 23px;
+}
+.about p{
+  margin: 25px;
+  border: 1px solid #fff;
+  padding: 15px;
+  margin-bottom: 40px;
+  max-width:600px;
+}
+
+.about .btn{  
+  background-color: #fff;
+  padding: 10px 25px;
+  color:#212060;
+  border-radius:25px ;
+}
+.about .btn i{
+  margin-left: 10px;
+}
+.about .btn:hover{
+  background-color:#212060;
+  color:#fff;
+}
+
+
+
+.footer{
+  background-color:#5E5E5F;
+  color:#fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  position: relative;
+}
+.footer>ul{ 
+ display: flex;
+  justify-content: center;
+ 
+}
+.footer>ul>li{
+  
+padding: 8px;
+}
+.footer>ul>li>a{
+  color:#fff;
+}
+.footer .fsub  a{
+  color:#C4C4C4;
+}
+.footer .fsub{
+  margin-top: 20px;
+  
+}
+.footer .fsub li{
+  margin-top: 10px;
+}
+@media (max-width:768px){
+  .footer>ul{
+    flex-wrap:wrap;
+  }
+  .footer>ul>li{
+    width: 22%;
+    margin-top: 20px;
+  }
+}
+@media (max-width:512px){
+
+  .footer>ul>li{
+    width: 45%;
+    margin-top: 20px;
+  }
+}
+
+.ft{
+  background-color:#333;
+  color:#C4C4C4;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+}
+ 
+.ft .left a{
+   color:#C4C4C4;
+   margin-right: 8px;
+  font-size: 15px;
+}
+@media (max-width:768px){
+  .ft{
+    flex-direction:column;
+    height:auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .ft .left{
+   margin-bottom: 10px;
+}
+}
+
+.gotop{
+  background-color:#fff;
+  position: absolute;
+  border-radius:50%;
+  
+ padding: 10px;
+ bottom: 20px;
+  right: 10px;
+  color:#5E5E5F;
+  font-size: 15px;
+  cursor:pointer;
+}
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+ 
+  <div class="contentwrap">
+
+  <div class="header container">
+   <a href="#"> <h1>profit account</h1></a>
+      
+    <div class="flr">
+      <div class="flr-left">
+      <a href="#" class="active">Home</a>
+      <a href="#">Contact Us</a>
+        </div>
+       <div class="lang">
+         <a href="#" class="active">EN</a>|<a href="#">繁</a>|<a href="#">簡</a>
+         
+         
+       </div>
+    </div>
+    <div class="navtog">
+      <span class="span1"></span>
+      <span class="span2"></span>
+      <span class="span3"></span>
+    </div>   
+    </div>
+    
+    
+  <div class="nav">
+    <ul class="mainnav">
+      <li>
+        <a href="#">About Us
+          <ul class="subnav">
+            <li><a href="#"><i class="fa fa-caret-right"></i>Core Value</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Professional Team</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Awards & Recognition</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>News and Insights</a></li>
+          </ul>                
+        </a>
+      </li>
+      <li>
+        <a href="#">Company
+          <ul class="subnav">
+             <li><a href="#"><i class="fa fa-caret-right"></i>Company Registration</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Company Registration - news</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Limited Company</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Company Formation</a></li>
+          </ul>        
+        </a>
+      </li>
+      <li>
+        <a href="#">Offshore
+             <ul class="subnav">
+             <li><a href="#"><i class="fa fa-caret-right"></i>BVI Company</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Seychelles Company</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Cayman Islands Company</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Samoa Company</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Anguilla COmpany</a></li>
+          </ul>        
+        </a>
+      </li>
+      <li><a href="#">Audit</a></li>
+      <li><a href="#">Accounting</a></li>
+      <li><a href="#">Tax Filing</a></li>
+      <li><a href="#">Virtual Office</a></li>
+      <li><a href="#">Secretary</a></li>
+    </ul>
+  </div>
+  
+   
+   <div class="slide owl-carousel owl-theme" >
+    <div class="items"  style="background-image:url(https://images.unsplash.com/photo-1518599807935-37015b9cefcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)"></div>
+     <div class="items" style="background-image:url(https://images.unsplash.com/photo-1514724986142-299bc2f19467?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1075&q=80)"></div>
+     <div class="items" style="background-image:url(https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)"></div>
+  </div>  
+  
+  <div class="bannerB">我們的服務</div>
+  
+  <div class="content">
+    <div class="container">
+      <ul>
+        <li>
+         <a href="#">
+         <div class="mask">
+         <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+         </div>
+         <h3 class="title">Audit services <i class="fa fa-arrow-right"></i></h3>
+         <p class="des">Pratival Audit Solutions- ON Time-NO Excuses</p>
+         </a>          
+        </li>
+        
+                 <li>
+         <a href="#">
+         <div class="mask">
+         <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+         </div>
+         <h3 class="title">Tax FIling Services <i class="fa fa-arrow-right"></i></h3>
+         <p class="des">Pratival Audit Solutions Tax Return</p>
+         </a>          
+        </li>
+        
+                <li>
+         <a href="#">
+         <div class="mask">
+         <img src="https://images.unsplash.com/photo-1512729343400-4fcf83a18f72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" alt="">
+         </div>
+         <h3 class="title">Company Resgistration <i class="fa fa-arrow-right"></i></h3>
+         <p class="des">Company&Offshore Company Resgistration</p>
+         </a>          
+        </li>
+        
+                <li>
+         <a href="#">
+         <div class="mask">
+         <img src="https://images.unsplash.com/photo-1534951009808-766178b47a4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+         </div>
+         <h3 class="title">Accounting Services<i class="fa fa-arrow-right"></i></h3>
+         <p class="des">Parctical Accounting & Book Keeping Services</p>
+         </a>          
+        </li>
+        
+                <li>
+         <a href="#">
+         <div class="mask">
+         <img src="https://images.unsplash.com/photo-1518186233392-c232efbf2373?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+         </div>
+         <h3 class="title">Secretay Services<i class="fa fa-arrow-right"></i></h3>
+         <p class="des">Loremd delectus, neque voluptatibus!</p>
+         </a>          
+        </li>
+        
+                <li>
+         <a href="#">
+         <div class="mask">
+         <img src="https://images.unsplash.com/photo-1470921269614-2937493e6a2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+         </div>
+         <h3 class="title">Audit services <i class="fa fa-arrow-right"></i></h3>
+         <p class="des">Pratival Audit Solutions- ON Time-NO Excuses</p>
+         </a>          
+        </li>
+        
+      </ul>
+        
+    </div>
+    
+    </div>
+  
+    
+  
+  <div class="about">
+    <div class="wrap">
+    <h3>About Profit Accounting</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, temporibus. adipisicing elit. Maiores consectetur illo, culpa in sit laborum eos suscipit fugit enim distinctio ullam eligendi cumque esse iusto adipisci cupiditate, aut expedita ipsam.</p>
+    <a href="#" class="btn">Read More <i class="fa fa-caret-right"></i></a>
+    </div>
+    </div>   
+    
+    
+ 
+ <div class="footer">
+   <ul>
+     <li>About Us
+         <ul class="fsub">            
+              <li><a href="#">Core Value & Professional</a> </li>
+             <li> <a href="#">Qualifications</a> </li>
+             <li> <a href="#">Awards & Recognition</a> </li>
+             <li> <a href="#">News and Insights</a> </li>           
+         </ul>
+     </li>
+     <li>Company
+         <ul class="fsub">
+           <li><a href="#">Limited Company</a></li>
+           <li><a href="#">Registration-Requirement</a></li>
+           <li><a href="#">Purchase Shelf Limited</a></li>
+           <li><a href="#">Unlimited Company Formany</a></li>
+         </ul>
+     </li>
+     <li>Offshore
+         <ul class="fsub">
+           <li><a href="#">BVI company</a></li>
+           <li><a href="#">Seychelles COmpany</a></li>
+           <li><a href="#">Cayman Company</a></li>
+           <li><a href="#">Samoa Comapny</a></li>
+           <li><a href="#">Anguilla Company</a></li>
+         </ul>
+     </li>
+     <li><a href="#">Secretary</a></li>
+     <li><a href="#">Accouting</a></li>
+     <li><a href="#">Audit Services</a></li>
+     <li><a href="#">Virtual Office</a></li>
+     <li><a href="#">Tax Filing</a></li>
+   </ul>
+   
+    <div class="gotop"><i class="fa fa-chevron-up"></i></div>
+ </div>   
+    
+<div class="ft">
+  <div class="left">
+    <a href="#">Home</a>
+    <a href="#">Contact Us</a>
+  </div>
+  
+  <p>Copyright&copy; Profit Accounting Company Limited.All Rights Reserve</p>
+</div>    
+    
+        
+</div>
+<!--contentwrap end--> 
+  
+  
+ 
+  <div class="mobnav">
+    <div class="lang">
+      <span class="active">EN</span>
+       <span>繁</span>
+       <span>簡</span>
+    </div>
+    
+    <ul>
+      <li>
+        <a href="#">About Us</a><span class="mobtog">+</span>
+           <ul class="sub">
+              <li><a href="#">Core Value & Professional</a> </li>
+             <li> <a href="#">Qualifications</a> </li>
+             <li> <a href="#">Awards & Recognition</a> </li>
+             <li> <a href="#">News and Insights</a> </li>    
+           </ul>                
+      </li>
+      <li>
+         <a href="#">Company</a><span class="mobtog">+</span>
+           <ul class="sub">
+              <li><a href="#">Limited Company</a></li>
+           <li><a href="#">Registration-Requirement</a></li>
+           <li><a href="#">Purchase Shelf Limited</a></li>
+           <li><a href="#">Unlimited Company Formany</a></li>
+           </ul> 
+      </li>
+      <li>
+        <a href="#">Offshore</a><span class="mobtog">+</span>
+           <ul class="sub">
+               <li><a href="#">BVI company</a></li>
+           <li><a href="#">Seychelles COmpany</a></li>
+           <li><a href="#">Cayman Company</a></li>
+           <li><a href="#">Samoa Comapny</a></li>
+           <li><a href="#">Anguilla Company</a></li>
+           </ul> 
+        
+      </li>
+      <li><a href="#">Secretary</a></li>
+      <li><a href="#">Accouting</a></li>
+      <li><a href="#">Audit Services</a></li>
+      <li><a href="#">Virtual Office</a></li>
+       <li><a href="#">Tax Filing</a></li>
+  
+    </ul>
+  </div>
+ 
+ 
+  
+  
+    <script>
+     $(document).ready(function() {
+
+ 
+ 
+$(".owl-carousel").owlCarousel({
+items: 1, 
+loop: true, 
+margin: 0, 
+nav: true, 
+autoplay: true, 
+autoplayTimeout: 3000, 
+autoplayHoverPause: true 
+})
+        
+
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  
+  <title>generator</title>
+  <style>
+       *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color:#4F76AE;
+  font-family:"微軟正黑體";
+  font-weight: bold;
+}
+.wrap {
+  max-width: 300px;
+  height: 600px;
+  margin: 30px auto;
+  border: 2px solid #fff;
+  font-size: 18px;
+  background-color: rgba(0,0,0,.8);
+  color:#fff;
+  background: url('https://images.unsplash.com/photo-1560062518-963487d6397d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=660&q=80');
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size:cover ;
+ position: relative; 
+    border-radius:10px;
+overflow: hidden;
+  box-shadow:2px 2px 5px #333;
+ 
+}
+.mask{  
+  background-color:rgba(0,0,0,.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 25px;   
+   
+}
+h1{
+  font-size: 25px;
+  text-align: center;
+}
+input[type="radio"]{
+  margin: 15px;
+}
+select{
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  font-family:"微軟正黑體";
+  font-weight: bold;
+  border-radius:5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+ 
+.btnwrap{
+ 
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  
+  
+
+}
+input[type="button"],input[type="reset"]{
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color:#4F76AE;
+  border:none;
+  font-size: 15px;
+  color:#fff;
+  padding: 5px 25px;
+  border-radius:25px;
+  font-family:"微軟正黑體";
+  outline:none;
+  cursor:pointer;
+  font-weight:bold;
+}
+ 
+.para{
+  text-align: center;
+  height: 260px;  
+  padding: 15px;
+  line-height: 30px;
+  overflow: hidden;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<div class="mask">
+
+<h1>身分證字號Generator</h1>
+<select name="city" id="city">
+  <option value="" selected>請選擇...</option>
+  <option value="A" >台北市</option>
+  <option value="B">台中市</option>
+  <option value="C">基隆市</option>
+  <option value="D">台南市</option>
+  <option value="E">高雄市</option>
+  <option value="F">新北市</option>
+  <option value="G">宜蘭市</option>
+  <option value="H">桃園市</option>
+  <option value="M">南投縣</option>
+  <option value="N">彰化縣</option>
+</select>
+ <input type="radio" name="gender" value="1" checked>男
+<input type="radio"  name="gender" value="2">女 
+  
+  <div class="btnwrap">
+<input type="button" value="產生" id="btn"> 
+  <input type="reset" value="重置" id="reset"> 
+ </div>
+    
+    <div id="para" class="para"></div> 
+</div>
+  </div>  
+
+  
+  
+  <script>
+ 
+   var btn = document.getElementById('btn');
+     var reset = document.getElementById('reset');
+     
+    reset.onclick=function(){  
+       $('#para').empty();
+    }
+    btn.onclick=function(){  
+        
+      
+      
+         
+        if (!fir()){
+          alert('請選擇城市');
+          return;
+        }else{
+         $('#para').prepend('<p>'+gogo()+'</p>');
+        }
+      }
+  
+
+
+    
+function gogo(){   
+        var aaa = [];  //陣列
+       var pus =aaa.push(fir()+gg()+ran()); //新增陣列
+        var a = aaa.join('<br>');   //轉字串
+        var noen = a.slice(1,10);   //擷取數字
+        var myarr = noen.split(''); //轉陣列
+        var num1 =Number(myarr[0]);
+       var num2 =Number(myarr[1]);
+      var num3 =Number(myarr[2]);
+      var num4 =Number(myarr[3]);
+      var num5 =Number(myarr[4]);
+      var num6 =Number(myarr[5]);
+      var num7 =Number(myarr[6]);
+      var num8 =Number(myarr[7]);
+      var num9 =Number(myarr[8]);
+      
+      
+     
+       var en=a.slice(0,1);
+       
+      
+      var first = 0
+      var second =0
+      switch (en) {
+  case 'A':
+      first =1;
+     second =0;
+    break;
+  case 'B':
+          first =1;
+      second =1;
+    break;
+  case 'C':
+      first =1;
+     second =2;
+ 
+    break;
+  case 'D':
+      first =1;
+     second =3;
+    break;
+  case 'E':
+      first =1;
+     second =4;
+    break;
+  case 'F':
+      first =1;
+     second =5;
+    break;
+  case 'G':
+      first =1;
+     second =6;
+    break;
+  case 'H':
+      first =1;
+     second =7;
+    break;
+  case 'M':
+      first =2;
+     second =1;
+    break;
+          
+   case 'N':
+      first =2;
+     second =2;
+    break;
+    default:
+    console.log('Sorry, we are out of');
+   
+}
+      
+   var all = first*1+second*9+num1*8+num2*7+num3*6+num6*5+num5*4+num6*3+num7*2+num8*1+num9*1;       
+ 
+     console.log(aaa);
+     console.log(all);
+     
+   if (all%10 == 0){
+ 
+     return aaa+' 合法'; 
+   }else{
+     return aaa
+   }
+          
+       
+}    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+  function gg(){
+      var gender = document.getElementsByName('gender');     
+      for(i=0;i<gender.length;i++){
+        if(gender[i].checked){             
+       return gender[i].value;
+      }      
+   }
+}  
+    
+    
+   function fir(){
+      var first = document.getElementById('city');     
+      for(i=0;i<first.length;i++){
+         if (first[i].selected){
+           
+           return first[i].value;
+         }         
+      }      
+ }
+      
+  function ran(){
+      var arr = [];
+      for(i=1;i<=8;i++){      
+      var ar = arr.push(getRandom(0,9));
+      var res = arr.join('');
+       
+      }
+    return res;
+  } 
+    
+    
+    function getRandom(min,max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+      };   
+    
+  </script>
+</body>
+</html>
